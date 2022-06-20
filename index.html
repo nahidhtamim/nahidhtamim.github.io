@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHT Portfolio</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        (function() {
+            var words = [
+                    'Web Developer',
+                    'Web Designer',
+                    'Freelancer',
+                ],
+                i = 0;
+            setInterval(function() {
+                $('#profession').fadeOut(function() {
+                    $(this).html(words[i = (i + 1) % words.length]).fadeIn();
+                });
+            }, 2000);
+
+        })();
+    </script>
+</head>
+
+<body>
+    <section class="main-div">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-auto col-lg-auto sticky-top sidenav">
+                    <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top mb-4 sidenav-btn">
+                        <a href="/" class="d-block p-1 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                            <h2><b>NHT</b></h2>
+                        </a>
+                        <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-2 align-items-center">
+
+                            <li class="nav-item">
+                                <a href="#Section1" class="nav-link px-0 about" id="about" onclick="show('Section1');">
+                                    <i class=" bi-person-circle fs-4 "></i>
+                                    <br>
+                                    <span>About</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#Section2" class="nav-link px-0 resume" id="resume" onclick="show('Section2');">
+                                    <i class="bi-card-text fs-4 "></i>
+                                    <br>
+                                    <span>Resume</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#Section3" class="nav-link px-0 work" id="work" onclick="show('Section3');">
+                                    <i class="bi-ui-checks fs-4 "></i>
+                                    <br>
+                                    <span>Work</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#Section4" class="nav-link px-0 contact" id="contact" onclick="show('Section4');">
+                                    <i class="bi-at fs-4 "></i> <br>
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm col-lg-5 pb-2">
+                    <!--Profile Card 3-->
+                    <div class="d-flex ">
+                        <div class="card profile-card">
+                            <div class="background-block">
+                                <img src="cover.jpg " alt="profile-sample1 " class="background " />
+                            </div>
+                            <div class="profile-thumb-block ">
+                                <img src="profile.jpg " alt="profile-image " class="profile " />
+                            </div>
+                            <div class="card-content">
+                                <h2>Md. Nahid Hasan Tamim</h2>
+                                <br>
+                                <div>
+                                    <h5>I am a
+                                        <span id="profession" class="gradient">Web Developer</span>
+                                    </h5>
+                                </div>
+                                <br>
+                                <div class="icon-block ">
+                                    <a href="# "><i class="fa fa-facebook "></i></a>
+                                    <a href="# "> <i class="fa fa-twitter "></i></a>
+                                    <a href="# "> <i class="fa fa-google-plus "></i></a>
+                                </div>
+
+                                <div class="c2a-btn footer-c2a-btn">
+                                    <div class="btn-group btn-group-lg" role="group" aria-label="Call to action">
+                                        <a type="button" class="btn btn-default btn-lg" href="#">Download CV</a>
+                                        <span class="btn-circle btn-or">or</span>
+                                        <a type="button" class="btn btn-default btn-lg" href="#">Contact Me</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm details col-lg-5">
+                    <!-- content -->
+                    <div id="Section1" class="aboutDiv" style="display:block;">
+                        <div class="row">
+                            <h3 class="gradient">
+                                Objective
+                            </h3>
+                            <hr>
+                            <div class="col-md-12">
+                                <p>To work with the best of my abilities and skills in order to benefit the organization I’m working in to be one of the best in this competitive time. And also, to serve my parents, and my country.</p>
+                            </div>
+                            <h3 class="gradient">
+                                About Me
+                            </h3>
+                            <hr>
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <p>I am MD. Nahid Hasan Tamim. I am from Dhaka, Bangladesh. I have rich experience in website design and development, also I am good at wordpress. Let's get in touch, and discuss about how skills can be helpful to you.</p>
+                                <p>Integrity and Humbleness are the two main traits that I am built upon. Beyond that, I am someone who knows how to set goals and achieve them, and have a proven track record of being able to conceive, develop & execute strategies.</p>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <div class="list">
+                                    <div class="box" style="--color: #fc5f9b">
+                                        <div class="content">
+                                            <div class="text">
+                                                <h6>Date Of Birth</h6>
+                                                <p>30-12-1994</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box" style="--color: #a362ea">
+                                        <div class="content">
+                                            <div class="text">
+                                                <h6>Religion</h6>
+                                                <p>Islam</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box" style="--color: #2EE59D">
+                                        <div class="content">
+                                            <div class="text">
+                                                <h6>Sex</h6>
+                                                <p>Male</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box" style="--color: #2bb2f0">
+                                        <div class="content">
+                                            <div class="text">
+                                                <h6>Location</h6>
+                                                <p>North Rajason, Savar, Dhaka</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="gradient">
+                                Education
+                            </h3>
+                            <hr>
+                            <div class="col-md-12">
+                                <ul class="timeline">
+                                    <li>
+                                        <a href="#" class="job_title">Jahangirnagar University</a>
+                                        <a href="#" class="pull-right"> <small>CGPA: 3.27</small> </a>
+                                        <p> <b>Masters:</b> Computer Science and Engineering</p>
+                                        <p> <b>Passing Year:</b> 2021</p>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="job_title">University Of Liberal Arts Bangladesh</a>
+                                        <a href="#" class="pull-right"> <small>CGPA: 3.07</small> </a>
+                                        <p> <b>BSc. - Major:</b> Computer Science and Engineering</p>
+                                        <p> <b>BSc. - Minor:</b> Electronics and Telecommunication Engineering.</p>
+                                        <p> <b>Passing Year:</b> 2018</p>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="job_title">Northern College Bangladesh</a>
+                                        <a href="#" class="pull-right"> <small>CGPA: 3.50</small> </a>
+                                        <p> <b>H.S.C:</b> Science Group</p>
+                                        <p> <b>Passing Year:</b> 2013</p>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="job_title">St. Joseph’s High School</a>
+                                        <a href="#" class="pull-right"> <small>CGPA: 4.94</small> </a>
+                                        <p> <b>S.S.C:</b> Science Group</p>
+                                        <p> <b>Passing Year:</b> 2011</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- content -->
+                    <div id="Section2" class="resumeDiv" style="display:none;">
+                        <div class="row">
+                            <h3 class="gradient">
+                                Resume
+                            </h3>
+                            <hr>
+                            <div class="col-md-12">
+                                <ul class="timeline">
+                                    <li>
+                                        <a href="#" class="job_title">Senior Executive Programmer</a>
+                                        <a href="#" class="pull-right"> <small>20 December, 2021 - Present</small> </a>
+                                        <p> <b>Department:</b> IT & MIS</p>
+                                        <p> <b>Organization:</b> Swisstex Group Ltd</p>
+                                        <p> <b>Responsibilities:</b>
+                                            <ul>
+                                                <li>Working on an existing ERP System on further development and bug fixing</li>
+                                                <li>Providing client support</li>
+                                                <li>Working on several web development projects of Sister Concerns of Swisstex Group</li>
+                                            </ul>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="job_title">Officer (MIS)</a>
+                                        <a href="#" class="pull-right"><small>19 May, 2019 - 19 December, 2021</small> </a>
+                                        <p> <b>Department:</b> Credit Risk Management</p>
+                                        <p> <b>Organization:</b> The City Bank Ltd</p>
+                                        <p> <b>Responsibilities:</b>
+                                            <ul>
+                                                <li>Worked with several sensitive databases like – SME-M, Commercial, Corporate Loans List, Daily and Monthly Loan Approvals List, Loan CRG & ICRR rating List, Weekly Under Process Loans List, etc</li>
+                                                <li>Prepare several types of reports from those databases for management's decision.</li>
+                                                <li>Worked closely with IT division on development of a Web Application named - Loan Proposal Tracking System (LPTS).</li>
+                                            </ul>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 class="gradient">
+                                Other Experience
+                            </h3>
+                            <hr>
+                            <div class="col-md-12">
+                                <ul class="">
+                                    <li>Completed a three-month internship period in Bangladesh Bank’s Information Systems Development Department (ISDD).</li>
+                                    <li>Solved more than 25 programming problems in UVa Online Judge platform.</li>
+                                </ul>
+                            </div>
+                            <h3 class="gradient">
+                                Training & Certification
+                            </h3>
+                            <hr>
+                            <div class="col-md-12">
+                                <ul class="">
+                                    <li>“Augmented Reality Course” under BHTPA.</li>
+                                    <li>“Web Development Course” under LICT, naming “Top-Up”.</li>
+                                    <li>“Excel Professional Course” from 10MinutesSchool</li>
+                                    <li>"Frontend Development with React.js" from Online (Ongoing)</li>
+                                    <li>"Oracle Certified Professional (OCP) 12c: DBA" from IBCS Primax Ltd (Fundamentals Only)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Section3" class="workDiv" style="display:none;">
+                        <h3>Work...</h3>
+                        <hr>
+                        <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag
+                            cronut semiotics, raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics
+                            ugh synth chillwave meditation. Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
+                    </div>
+
+                    <div id="Section4" class="contactDiv" style="display:none;">
+                        <h3>Contact...</h3>
+                        <hr>
+                        <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag
+                            cronut semiotics, raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics
+                            ugh synth chillwave meditation. Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
