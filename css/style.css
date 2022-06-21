@@ -476,9 +476,12 @@ ul.timeline>li a small {
 }
 
 .asp:hover,
-.react:hover,
-.oracle:hover {
+.react:hover {
     box-shadow: inset -40px -40px 15px #2ee59c94, inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.oracle:hover {
+    box-shadow: inset -10px -10px 15px #2ee59c94, inset 10px 10px 15px rgba(70, 70, 70, 0.12);
 }
 
 
