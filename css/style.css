@@ -481,7 +481,7 @@ ul.timeline>li a small {
 }
 
 .oracle:hover {
-    box-shadow: inset -10px -10px 15px #2ee59c94, inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+    box-shadow: inset -20px -20px 15px #2ee59c94, inset 10px 10px 15px rgba(70, 70, 70, 0.12);
 }
 
 
