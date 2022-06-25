@@ -4,7 +4,6 @@
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     position: relative;
-    /* background-image: url('https://flevix.com/wp-content/uploads/2020/01/Fade-In-Background.svg'); */
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, #020024 0%, #097932 35%, #2EE59D 100%);
     background-size: cover;
@@ -64,10 +63,10 @@ h1 a {
     justify-content: center;
 }
 
-#profession {
-    color: #2EE59D;
-    font-weight: bold;
-}
+
+/* ===================
+Sidenav Css Starts
+===================== */
 
 .sidenav-btn {
     box-shadow: 0px 8px 15px rgba(248, 248, 248, 0.481);
@@ -99,7 +98,17 @@ h1 a {
     /* transform: translateY(-7px); */
 }
 
-.profile-card {
+
+/* ===================
+Sidenav Css Ends
+===================== */
+
+
+/* ===================
+Info Card Css Starts
+===================== */
+
+.info-card {
     position: relative;
     float: left;
     overflow: hidden;
@@ -110,14 +119,19 @@ h1 a {
     box-shadow: 0px 8px 15px rgba(248, 248, 248, 0.481);
 }
 
-.profile-card .background-block {
+#profession {
+    color: #2EE59D;
+    font-weight: bold;
+}
+
+.info-card .background-block {
     float: left;
     width: 100%;
     height: 300px;
     overflow: hidden;
 }
 
-.profile-card .background-block .background {
+.info-card .background-block .background {
     width: 100%;
     vertical-align: top;
     opacity: 0.9;
@@ -127,7 +141,7 @@ h1 a {
     transform: scale(2.8);
 }
 
-.profile-card .card-content {
+.info-card .card-content {
     width: 100%;
     padding: 15px 25px;
     color: #232323;
@@ -140,7 +154,7 @@ h1 a {
     padding-top: 60px;
 }
 
-.profile-card .card-content::before {
+.info-card .card-content::before {
     content: '';
     padding-top: 60px;
     background: #ffffff;
@@ -206,7 +220,7 @@ h1 a {
     border: 1px solid #000;
 }
 
-.profile-card .profile {
+.info-card .profile {
     border-radius: 50%;
     position: absolute;
     bottom: 55%;
@@ -220,19 +234,19 @@ h1 a {
     z-index: 99999;
 }
 
-.profile-card h2 {
+.info-card h2 {
     margin: 0 0 5px;
     font-weight: 600;
     font-size: 25px;
 }
 
-.profile-card h2 small {
+.info-card h2 small {
     display: block;
     font-size: 15px;
     margin-top: 10px;
 }
 
-.profile-card i {
+.info-card i {
     display: inline-block;
     font-size: 20px;
     color: #000;
@@ -249,23 +263,33 @@ h1 a {
     margin: 0 5px;
 }
 
-.profile-card .icon-block {
+.info-card .icon-block {
     float: left;
     width: 100%;
     margin-top: 15px;
 }
 
-.profile-card .icon-block a {
+.info-card .icon-block a {
     text-decoration: none;
 }
 
-.profile-card i:hover {
+.info-card i:hover {
     background-color: #2EE59D;
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     color: #fff;
     font-weight: bold;
     text-decoration: none;
 }
+
+
+/* ===================
+Info Card Css Ends
+===================== */
+
+
+/* ===================
+Details Css Starts
+===================== */
 
 .aboutDiv,
 .resumeDiv,
@@ -292,6 +316,9 @@ h1 a {
     animation: move 1s infinite;
 }
 
+
+/* ========Colourful Item Css=========== */
+
 .list {
     gap: 10px;
 }
@@ -304,25 +331,6 @@ h1 a {
     border-radius: 5px;
     cursor: pointer;
 }
-
-
-/* .list .box:nth-child(1) {
-    transform: translateX(-70px);
-    transition: 0.5s ease-in-out;
-}
-
-.list .box:nth-child(3) {
-    transform: translateX(70px);
-    transition: 0.5s ease-in-out;
-}
-
-.list:hover .box:nth-child(1) {
-    transform: translateX(0px);
-}
-
-.list:hover .box:nth-child(3) {
-    transform: translateX(0px);
-} */
 
 .list .box::before {
     content: '';
@@ -349,26 +357,9 @@ h1 a {
     padding-left: 10px;
 }
 
-
-/* .list .box .content .icon {
-    position: relative;
-    min-width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s ease-in-out;
-} */
-
 .list .box:hover .content .icon {
     color: #fff;
 }
-
-
-/* .list .box .content .text h3 {
-    font-weight: 300;
-    color: var(--color);
-    transition: 0.5s ease-in-out;
-} */
 
 .list .box .content .text p {
     font-size: 0.9em;
@@ -380,6 +371,12 @@ h1 a {
 .list .box:hover .content .text p {
     color: #fff;
 }
+
+
+/* ========Colourful Item Css=========== */
+
+
+/* ========Timeline Item Css=========== */
 
 ul.timeline {
     list-style-type: none;
@@ -433,6 +430,12 @@ ul.timeline>li a small {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+
+/* ========Timeline Item Css=========== */
+
+
+/* ========Skill Icon Css=========== */
+
 .skill-image {
     padding: .5vw;
     font-size: 0;
@@ -449,13 +452,12 @@ ul.timeline>li a small {
     -webkit-box-flex: auto;
     -ms-flex: auto;
     flex: auto;
-    width: 80px;
+    width: 100px;
     margin: .5vw;
     background-color: #fff;
     padding: 15px;
     border-radius: 50%;
     color: #000;
-    /* box-shadow: -15px -15px 20px rgba(255, 255, 255, 0.5), 15px 15px 20px rgba(70, 70, 70, 0.12); */
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 }
 
@@ -491,19 +493,6 @@ ul.timeline>li a small {
     box-shadow: inset -20px -20px 15px #2ee59c94, inset 10px 10px 15px rgba(70, 70, 70, 0.12);
 }
 
-
-/* .skill-image div:hover {
-    border-radius: 30px;
-    transform: rotateZ(360deg);
-    box-shadow: inset -40px -40px 15px #2ee59c73, inset 10px 10px 15px rgba(70, 70, 70, 0.12);
-}
-
-.skill-image div:hover {
-    border-radius: 30px;
-    transform: rotateZ(360deg);
-    box-shadow: inset -40px -40px 15px #2ee59c73, inset 10px 10px 15px rgba(70, 70, 70, 0.12);
-} */
-
 .skill-image div img {
     width: 100%;
     height: auto;
@@ -517,3 +506,152 @@ ul.timeline>li a small {
         padding: 0;
     }
 }
+
+
+/* ========Skill Icon Css=========== */
+
+
+/* ========Portfolio Css=========== */
+
+ul.filters {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 30px 0;
+}
+
+ul.filters>li {
+    list-style: none;
+    display: inline-block;
+}
+
+ul.filters>li>a {
+    display: block;
+    color: #434e5e;
+    text-decoration: none;
+    padding: 5px 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+ul.filters>li>a:hover {
+    background-color: #e6e9ed;
+}
+
+ul.filters>li.active>a {
+    color: #fff;
+    background-color: #2EE59D;
+}
+
+.filters.filters-tag {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    line-height: 1;
+    text-align: center;
+}
+
+ul.filters.filters-tag>li>a {
+    display: block;
+    color: #434e5e;
+    border-radius: 0.25rem;
+    padding: 0.3rem 0.6rem;
+}
+
+ul.filters.filters-tag>li.active>a {
+    color: #fff;
+    background-color: #2EE59D;
+}
+
+.filters-tag {
+    font-size: 0.9rem;
+}
+
+.project {
+    position: relative;
+    margin-bottom: 50px;
+    color: #000;
+    border-radius: 0;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.075);
+}
+
+.project-head {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    text-align: center;
+    background-color: rgba(67, 78, 94, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -ms-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+
+.project-hover {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2EE59D;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -ms-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+
+.project-body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h4.title {
+    color: #434e5e;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.project-btn {
+    margin-bottom: -40px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #eee;
+    border-radius: 0;
+    width: 50;
+    box-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.075);
+}
+
+.project-btn:hover {
+    background-color: #2EE59D;
+    color: #fff;
+}
+
+
+/* ========Portfolio Css=========== */
+
+
+/* ===================
+Details Css Ends
+===================== */

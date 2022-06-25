@@ -7,37 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NHT Portfolio</title>
 
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
-    <script>
-        (function() {
-            var words = [
-                    'Web Developer',
-                    'Web Designer',
-                    'Freelancer',
-                ],
-                i = 0;
-            setInterval(function() {
-                $('#profession').fadeOut(function() {
-                    $(this).html(words[i = (i + 1) % words.length]).fadeIn();
-                });
-            }, 2000);
+    <!-- JavaScripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
-        })();
-    </script>
 </head>
 
 <body>
     <section class="main-div">
         <div class="container">
             <div class="row">
+
+                <!--==============================
+                    SideNav Starts
+                !=================================-->
+
                 <div class="col-sm-auto col-lg-auto sticky-top sidenav">
                     <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top mb-4 sidenav-btn">
                         <a href="/" class="d-block p-1 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
@@ -76,10 +65,17 @@
                     </div>
                 </div>
 
+                <!--==============================
+                    SideNav Ends
+                !=================================-->
+
+                <!--==============================
+                    Info Card Starts
+                !=================================-->
+
                 <div class="col-sm col-lg-5 pb-2">
-                    <!--Profile Card 3-->
                     <div class="d-flex ">
-                        <div class="card profile-card">
+                        <div class="card info-card">
                             <div class="background-block">
                                 <img src="images/cover.jpg " alt="profile-sample1 " class="background " />
                             </div>
@@ -112,8 +108,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm details col-lg-5">
-                    <!-- content -->
+
+                <!--==============================
+                    Info Card Ends
+                !=================================-->
+
+                <!--==============================
+                    Details Section Starts
+                !=================================-->
+
+                <div class="col-sm details col-lg-6">
                     <div id="Section1" class="aboutDiv" style="display:block;">
                         <div class="row">
                             <h3 class="gradient">
@@ -283,9 +287,241 @@
                             Portfolio
                         </h3>
                         <hr>
-                        <div class="col-md-12">
-                            <p>Under Construction...............!</p>
+                        <div class="">
+                            <div class="row">
+                                <div class="">
+                                    <ul class="filters text-center">
+                                        <li class="active" data-bs-filter="*">
+                                            <a href="#!"><i class="fas fa-star-of-life"></i> All</a>
+                                        </li>
+                                        <li data-bs-filter=".ecommerce">
+                                            <a href="#!"><i class="fas fa-laptop-code"></i> E-commerce</a>
+                                        </li>
+                                        <li data-bs-filter=".business">
+                                            <a href="#!"><i class="fas fa-globe"></i> Business Website</a>
+                                        </li>
+                                        <li data-bs-filter=".others">
+                                            <a href="#!"><i class="far fa-object-group"></i> Others</a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="projects">
+                                        <div class="row">
+                                            <div class="col-lg-6 item ecommerce html_language css_language js_language mysql_language laravel_language responsive">
+                                                <div class="project">
+                                                    <div class="project-head">
+                                                        <img src="images/portfolio/brandshop-gig.jpg" alt="" class="img-fluid card-img">
+                                                        <!-- <div class="project-overlay">
+                                                            <h4>NHT Brandshop</h4>
+                                                        </div> -->
+                                                        <div class="project-hover">
+                                                            <p>
+                                                                E-commerce Website Design & Developement
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="project-body text-center">
+                                                        <h3 class="title">NHT Brandshop</h3>
+
+                                                        <ul class="filters filters-tag text-center">
+                                                            tag:
+                                                            <li data-bs-filter=".html_language"><a href="#!">HTML</a></li>
+                                                            <li data-bs-filter=".css_language"><a href="#!">CSS</a></li>
+                                                            <li data-bs-filter=".js_language"><a href="#!">JS</a></li>
+                                                            <li data-bs-filter=".mysql_language"><a href="#!">MySql</a></li>
+                                                            <li data-bs-filter=".laravel_language"><a href="#!">Laravel</a></li>
+                                                            <li data-bs-filter=".responsive"><a href="#!">Responsive</a></li>
+                                                        </ul>
+
+                                                        <div class="btn-group" role="group">
+                                                            <a href="#!" class="btn project-btn"><i class="fas fa-file-download"></i> Download</a>
+                                                            <a href="#!" class="btn project-btn disabled"><i class="far fa-eye-slash"></i> View</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 item ecommerce html_language css_language js_language mysql_language laravel_language responsive">
+                                                <div class="project">
+                                                    <div class="project-head">
+                                                        <img src="images/portfolio/shilpabangla-gig.jpg" alt="" class="img-fluid card-img">
+                                                        <!-- <div class="project-overlay">
+                                                            <h4>NHT Brandshop</h4>
+                                                        </div> -->
+                                                        <div class="project-hover">
+                                                            <p>
+                                                                E-commerce Website Design & Developement
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="project-body text-center">
+                                                        <h3 class="title">Shilpabangla</h3>
+
+                                                        <ul class="filters filters-tag text-center">
+                                                            tag:
+                                                            <li data-bs-filter=".html_language"><a href="#!">HTML</a></li>
+                                                            <li data-bs-filter=".css_language"><a href="#!">CSS</a></li>
+                                                            <li data-bs-filter=".js_language"><a href="#!">JS</a></li>
+                                                            <li data-bs-filter=".mysql_language"><a href="#!">MySql</a></li>
+                                                            <li data-bs-filter=".laravel_language"><a href="#!">Laravel</a></li>
+                                                            <li data-bs-filter=".responsive"><a href="#!">Responsive</a></li>
+                                                        </ul>
+
+                                                        <div class="btn-group" role="group">
+                                                            <a href="#!" class="btn project-btn"><i class="fas fa-file-download"></i> Download</a>
+                                                            <a href="#!" class="btn project-btn disabled"><i class="far fa-eye-slash"></i> View</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 item business html_language css_language js_language mysql_language laravel_language responsive">
+                                                <div class="project">
+                                                    <div class="project-head">
+                                                        <img src="images/portfolio/Ivypro.jpg" alt="" class="img-fluid card-img">
+                                                        <!-- <div class="project-overlay">
+                                                            <h2>Eduzenship</h2>
+                                                        </div> -->
+                                                        <div class="project-hover">
+                                                            <p>
+                                                                A Student Consultancy Firm Website Design & Development
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="project-body text-center">
+                                                        <h3 class="title">Eduzenship</h3>
+
+                                                        <ul class="filters filters-tag text-center">
+                                                            tag:
+                                                            <li data-bs-filter=".html_language"><a href="#!">HTML</a></li>
+                                                            <li data-bs-filter=".css_language"><a href="#!">CSS</a></li>
+                                                            <li data-bs-filter=".js_language"><a href="#!">JS</a></li>
+                                                            <li data-bs-filter=".mysql_language"><a href="#!">MySql</a></li>
+                                                            <li data-bs-filter=".laravel_language"><a href="#!">Laravel</a></li>
+                                                            <li data-bs-filter=".responsive"><a href="#!">Responsive</a></li>
+                                                        </ul>
+
+                                                        <div class="btn-group" role="group">
+                                                            <a href="#!" class="btn  project-btn"><i class="fas fa-code"></i> Code</a>
+                                                            <a href="https://eduzenship.com/" class="btn  project-btn"><i class="far fa-eye"></i> View</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 item business html_language css_language js_language mysql_language laravel_language responsive">
+                                                <div class="project">
+                                                    <div class="project-head">
+                                                        <img src="images/portfolio/set-gig.jpg" alt="" class="img-fluid card-img">
+                                                        <!-- <div class="project-overlay">
+                                                            <h2>Eduzenship</h2>
+                                                        </div> -->
+                                                        <div class="project-hover">
+                                                            <p>
+                                                                A Premium Laundry Service Website Design & Developement
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="project-body text-center">
+                                                        <h3 class="title">SET</h3>
+
+                                                        <ul class="filters filters-tag text-center">
+                                                            tag:
+                                                            <li data-bs-filter=".html_language"><a href="#!">HTML</a></li>
+                                                            <li data-bs-filter=".css_language"><a href="#!">CSS</a></li>
+                                                            <li data-bs-filter=".js_language"><a href="#!">JS</a></li>
+                                                            <li data-bs-filter=".mysql_language"><a href="#!">MySql</a></li>
+                                                            <li data-bs-filter=".laravel_language"><a href="#!">Laravel</a></li>
+                                                            <li data-bs-filter=".responsive"><a href="#!">Responsive</a></li>
+                                                        </ul>
+
+                                                        <div class="btn-group" role="group">
+                                                            <a href="#!" class="btn  project-btn"><i class="fas fa-code"></i> Code</a>
+                                                            <a href="http://fiverr.eduzenship.com/" class="btn  project-btn"><i class="far fa-eye"></i> View</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 item business html_language css_language js_language mysql_language laravel_language responsive">
+                                                <div class="project">
+                                                    <div class="project-head">
+                                                        <img src="images/portfolio/main_affordable-gig.jpg" alt="" class="img-fluid card-img">
+                                                        <!-- <div class="project-overlay">
+                                                            <h2>Eduzenship</h2>
+                                                        </div> -->
+                                                        <div class="project-hover">
+                                                            <p>
+                                                                A Rent-a-car Business Website Design & Development
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="project-body text-center">
+                                                        <h3 class="title">Alt Florida</h3>
+
+                                                        <ul class="filters filters-tag text-center">
+                                                            tag:
+                                                            <li data-bs-filter=".html_language"><a href="#!">HTML</a></li>
+                                                            <li data-bs-filter=".css_language"><a href="#!">CSS</a></li>
+                                                            <li data-bs-filter=".js_language"><a href="#!">JS</a></li>
+                                                            <li data-bs-filter=".mysql_language"><a href="#!">MySql</a></li>
+                                                            <li data-bs-filter=".laravel_language"><a href="#!">Laravel</a></li>
+                                                            <li data-bs-filter=".responsive"><a href="#!">Responsive</a></li>
+                                                        </ul>
+
+                                                        <div class="btn-group" role="group">
+                                                            <a href="#!" class="btn  project-btn"><i class="fas fa-code"></i> Code</a>
+                                                            <a href="#!" class="btn  project-btn"><i class="far fa-eye"></i> View</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 item others html_language css_language js_language mysql_language laravel_language responsive">
+                                                <div class="project">
+                                                    <div class="project-head">
+                                                        <img src="images/portfolio/tad.jpg" alt="" class="img-fluid card-img">
+                                                        <!-- <div class="project-overlay">
+                                                            <h2>Others</h2>
+                                                        </div> -->
+                                                        <div class="project-hover">
+                                                            <p>
+                                                                Client-Coach Exam Portal
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="project-body text-center">
+                                                        <h3 class="title">TAD</h3>
+
+                                                        <ul class="filters filters-tag text-center">
+                                                            tag:
+                                                            <li data-bs-filter=".html_language"><a href="#!">HTML</a></li>
+                                                            <li data-bs-filter=".css_language"><a href="#!">CSS</a></li>
+                                                            <li data-bs-filter=".js_language"><a href="#!">JS</a></li>
+                                                            <li data-bs-filter=".mysql_language"><a href="#!">MySql</a></li>
+                                                            <li data-bs-filter=".laravel_language"><a href="#!">Laravel</a></li>
+                                                            <li data-bs-filter=".responsive"><a href="#!">Responsive</a></li>
+                                                        </ul>
+
+                                                        <div class="btn-group" role="group">
+                                                            <a href="#!" class="btn  project-btn"><i class="fas fa-code"></i> Code</a>
+                                                            <a href="http://freelancing.eduzenship.com/" class="btn  project-btn"><i class="far fa-eye"></i> View</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                     <div id="Section4" class="contactDiv" style="display:none;">
                         <h3 class="gradient">
@@ -297,9 +533,31 @@
                         </div>
                     </div>
                 </div>
+
+                <!--==============================
+                    Details Section Ends
+                !=================================-->
+
             </div>
         </div>
     </section>
+
+
+
+
+    <!--==============================
+    Scripts
+    !=================================-->
+
+    <script src="https://kit.fontawesome.com/177aa6247e.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!--==============================
+    Scripts
+    !=================================-->
+
 </body>
 
 </html>
