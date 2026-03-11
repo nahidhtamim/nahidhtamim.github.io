@@ -28,36 +28,39 @@
                 !=================================-->
 
                 <div class="col-sm-auto col-lg-auto sticky-top sidenav">
-                    <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top mb-4 sidenav-btn">
-                        <a href="/" class="d-block p-1 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
-                            <h2><b>NHT</b></h2>
-                        </a>
-                        <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-2 align-items-center">
-
+                    <div class="d-flex flex-sm-column flex-row flex-nowrap align-items-center sticky-top mb-4 sidenav-btn">
+                        <div class="sidenav-logo">
+                            <img src="images/nht-logo.svg" alt="NHT" width="52" height="52" />
+                        </div>
+                        <div class="sidenav-divider"></div>
+                        <ul class="nav nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center w-100 align-items-center sidenav-nav">
                             <li class="nav-item">
-                                <a href="#Section1" class="nav-link px-0 about" id="about" onclick="show('Section1');">
-                                    <i class=" bi-person-circle fs-4 "></i>
-                                    <br>
+                                <a href="#Section1" class="nav-link sidenav-link about active-nav" id="about" onclick="show('Section1');">
+                                    <i class="bi bi-person-circle"></i>
                                     <span>About</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#Section2" class="nav-link px-0 resume" id="resume" onclick="show('Section2');">
-                                    <i class="bi-card-text fs-4 "></i>
-                                    <br>
-                                    <span>Resume</span>
+                            <li class="nav-item">
+                                <a href="#Section2" class="nav-link sidenav-link resume" id="resume" onclick="show('Section2');">
+                                    <i class="bi bi-briefcase"></i>
+                                    <span>Experience</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#Section3" class="nav-link px-0 work" id="work" onclick="show('Section3');">
-                                    <i class="bi-ui-checks fs-4 "></i>
-                                    <br>
-                                    <span>Work</span>
+                            <li class="nav-item">
+                                <a href="#Section5" class="nav-link sidenav-link education" id="education" onclick="show('Section5');">
+                                    <i class="bi bi-award"></i>
+                                    <span>Education</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#Section4" class="nav-link px-0 contact" id="contact" onclick="show('Section4');">
-                                    <i class="bi-at fs-4 "></i> <br>
+                            <li class="nav-item">
+                                <a href="#Section3" class="nav-link sidenav-link work" id="work" onclick="show('Section3');">
+                                    <i class="bi bi-code-slash"></i>
+                                    <span>Skills</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#Section4" class="nav-link sidenav-link contact" id="contact" onclick="show('Section4');">
+                                    <i class="bi bi-envelope"></i>
                                     <span>Contact</span>
                                 </a>
                             </li>
@@ -77,31 +80,26 @@
                     <div class="d-flex ">
                         <div class="card info-card">
                             <div class="background-block">
-                                <img src="images/cover.jpg " alt="profile-sample1 " class="background " />
+                                <img src="images/cover.jpg" alt="cover" class="background" />
                             </div>
-                            <div class="profile-thumb-block ">
-                                <img src="images/profile.jpg " alt="profile-image " class="profile " />
+                            <div class="profile-thumb-block">
+                                <img src="images/profile.jpeg" alt="profile-image" class="profile" />
                             </div>
                             <div class="card-content">
                                 <h2>Md. Nahid Hasan Tamim</h2>
-                                <br>
                                 <div>
-                                    <h5>I am a
-                                        <span id="profession" class="gradient">Web Developer</span>
-                                    </h5>
+                                    <h5>I am a <span id="profession" class="gradient">Backend Developer</span></h5>
                                 </div>
-                                <br>
-                                <div class="icon-block ">
-                                    <a href="# "><i class="fa fa-facebook "></i></a>
-                                    <a href="# "> <i class="fa fa-twitter "></i></a>
-                                    <a href="# "> <i class="fa fa-google-plus "></i></a>
+                                <div class="icon-block">
+                                    <a href="https://github.com/nahidhtamim" target="_blank"><i class="bi bi-github"></i></a>
+                                    <a href="mailto:nahidhtamim@gmail.com"><i class="bi bi-envelope"></i></a>
+                                    <a href="https://www.linkedin.com/in/nahidhtamim" target="_blank"><i class="bi bi-linkedin"></i></a>
                                 </div>
-
                                 <div class="c2a-btn footer-c2a-btn">
                                     <div class="btn-group btn-group-lg" role="group" aria-label="Call to action">
-                                        <a type="button" class="btn btn-default btn-lg" href="#">Download CV</a>
+                                        <a type="button" class="btn btn-default btn-lg" href="Resume - MD. Nahid Hasan Tamim.pdf" download>Download CV</a>
                                         <span class="btn-circle btn-or">or</span>
-                                        <a type="button" class="btn btn-default btn-lg" href="#">Contact Me</a>
+                                        <a type="button" class="btn btn-default btn-lg" href="#Section4" onclick="show('Section4')">Contact Me</a>
                                     </div>
                                 </div>
                             </div>
@@ -119,85 +117,109 @@
 
                 <div class="col-sm details col-lg-6">
                     <div id="Section1" class="aboutDiv" style="display:block;">
-                        <div class="row">
-                            <h3 class="gradient">
-                                About Me
-                            </h3>
-                            <hr>
-                            <div class="col-sm-12 col-md-12 col-lg-6">
-                                <p>I am MD. Nahid Hasan Tamim. I am from Dhaka, Bangladesh. I am an expert in website design and development, also good at wordpress.</p>
-                                <p>Integrity and Humbleness are the two main personal traits that I am built upon. Beyond that, I am someone who knows how to set goals and achieve them, and have a proven track record of being able to conceive, develop &
-                                    execute strategies. I firmly believe that my communication & interpersonal skills coupled with my ability to improvise are few things I can offer to anyone who desires my assistance.</p>
+                        <h3 class="gradient">About Me</h3>
+                        <hr>
+                        <p>A full-stack web developer with <strong>6+ years</strong> of experience across banking, fintech, and international tech firms in the USA and UK. Currently Backend Developer at <strong>Coalition Technologies (USA)</strong>, specializing in Laravel, Shopify, and scalable web applications.</p>
+                        <!-- <p>Freelance Level 2 seller on Fiverr with a 5-star track record, blending technical depth with strong communication to deliver results that exceed expectations.</p> -->
+
+                        <div class="about-stats">
+                            <div class="about-stat-featured">
+                                <span class="featured-num">6+</span>
+                                <div>
+                                    <span class="featured-label">Years Of</span>
+                                    <span class="featured-label-bold">Experience</span>
+                                </div>
+                                <p>Full-stack development across banking, fintech & international tech firms in USA & UK.</p>
                             </div>
-                            <div class="col-sm-12 col-md-12 col-lg-6">
-                                <div class="list">
-                                    <div class="box" style="--color: #fc5f9b">
-                                        <div class="content">
-                                            <div class="text">
-                                                <h6>Date Of Birth</h6>
-                                                <p>30-12-1994</p>
+                            <div class="about-stat-grid">
+                                <div class="about-stat-card">
+                                    <span class="stat-card-num">139+</span>
+                                    <span class="stat-card-label">Projects Done</span>
+                                </div>
+                                <div class="about-stat-card">
+                                    <span class="stat-card-num">101+</span>
+                                    <span class="stat-card-label">Client Reviews</span>
+                                </div>
+                                <div class="about-stat-card">
+                                    <span class="stat-card-num">75+</span>
+                                    <span class="stat-card-label">Happy Clients</span>
+                                </div>
+                                <div class="about-stat-card">
+                                    <span class="stat-card-num">5★</span>
+                                    <span class="stat-card-label">Average Rating</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="expertise-section">
+                            <h6 class="expertise-title">What I Do</h6>
+                            <div class="service-grid">
+                                <div class="service-card">
+                                    <i class="bi bi-palette2 service-icon"></i>
+                                    <span class="service-name">Web Design</span>
+                                    <span class="service-desc">Clean, modern interfaces built for impact</span>
+                                </div>
+                                <div class="service-card">
+                                    <i class="bi bi-braces service-icon"></i>
+                                    <span class="service-name">Web Development</span>
+                                    <span class="service-desc">Robust, scalable apps from front to back</span>
+                                </div>
+                                <div class="service-card">
+                                    <i class="bi bi-kanban service-icon"></i>
+                                    <span class="service-name">Project Management</span>
+                                    <span class="service-desc">On-time delivery with clear communication</span>
+                                </div>
+                                <div class="service-card">
+                                    <i class="bi bi-lightbulb service-icon"></i>
+                                    <span class="service-name">Consultancy</span>
+                                    <span class="service-desc">Strategic guidance to turn ideas into products</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reviews-section">
+                            <h6 class="reviews-title">Client Reviews</h6>
+                            <div class="reviews-slider-wrap">
+                                <button class="reviews-arrow reviews-arrow-prev" aria-label="Previous">&#8249;</button>
+                                <div class="reviews-track-outer">
+                                    <div class="reviews-track">
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"Exceptional work on our Laravel e-commerce platform. Delivered ahead of schedule with clean, well-documented code. Highly professional."</p>
+                                            <div class="review-author">
+                                                <span class="review-name">James R.</span>
+                                                <span class="review-platform">USA · Fiverr</span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="box" style="--color: #a362ea">
-                                        <div class="content">
-                                            <div class="text">
-                                                <h6>Religion</h6>
-                                                <p>Islam</p>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"Nahid built our complete business website from scratch. Outstanding attention to detail, great communication throughout the project."</p>
+                                            <div class="review-author">
+                                                <span class="review-name">Sarah M.</span>
+                                                <span class="review-platform">UK · Direct</span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="box" style="--color: #2EE59D">
-                                        <div class="content">
-                                            <div class="text">
-                                                <h6>Sex</h6>
-                                                <p>Male</p>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"Best developer I've worked with. Fixed complex bugs in our Shopify store within hours and added new features flawlessly."</p>
+                                            <div class="review-author">
+                                                <span class="review-name">Ali K.</span>
+                                                <span class="review-platform">UAE · Fiverr</span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="box" style="--color: #2bb2f0">
-                                        <div class="content">
-                                            <div class="text">
-                                                <h6>Location</h6>
-                                                <p>Rajason, Savar, Dhaka</p>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"Incredibly talented full-stack developer. Delivered a complex web portal with API integrations perfectly. Will hire again without hesitation."</p>
+                                            <div class="review-author">
+                                                <span class="review-name">David L.</span>
+                                                <span class="review-platform">Canada · Fiverr</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <button class="reviews-arrow reviews-arrow-next" aria-label="Next">&#8250;</button>
                             </div>
-                            <h3 class="gradient">
-                                Education
-                            </h3>
-                            <hr>
-                            <div class="col-md-12">
-                                <ul class="timeline">
-                                    <li>
-                                        <a href="#" class="job_title">Jahangirnagar University</a>
-                                        <a href="#" class="pull-right"> <small>CGPA: 3.27</small> </a>
-                                        <p> <b>Masters:</b> Computer Science and Engineering</p>
-                                        <p> <b>Passing Year:</b> 2021</p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="job_title">University Of Liberal Arts Bangladesh</a>
-                                        <a href="#" class="pull-right"> <small>CGPA: 3.07</small> </a>
-                                        <p> <b>BSc. - Major:</b> Computer Science and Engineering</p>
-                                        <p> <b>BSc. - Minor:</b> Electronics and Telecommunication Engineering.</p>
-                                        <p> <b>Passing Year:</b> 2018</p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="job_title">Northern College Bangladesh</a>
-                                        <a href="#" class="pull-right"> <small>CGPA: 3.50</small> </a>
-                                        <p> <b>H.S.C:</b> Science Group</p>
-                                        <p> <b>Passing Year:</b> 2013</p>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="job_title">St. Joseph’s High School</a>
-                                        <a href="#" class="pull-right"> <small>CGPA: 4.94</small> </a>
-                                        <p> <b>S.S.C:</b> Science Group</p>
-                                        <p> <b>Passing Year:</b> 2011</p>
-                                    </li>
-                                </ul>
-                            </div>
+                            <div class="reviews-dots"></div>
                         </div>
                     </div>
 
@@ -211,55 +233,142 @@
                             <div class="col-md-12">
                                 <ul class="timeline">
                                     <li>
+                                        <a href="#" class="job_title">Backend Developer (Remote)</a>
+                                        <a href="#" class="pull-right"> <small>Mar, 2025 – Present</small> </a>
+                                        <p> <b>Organization:</b> Coalition Technologies (USA)</p>
+                                        <ul>
+                                            <li>Added new features to an existing Laravel-based CRM system.</li>
+                                            <li>Customized Shopify storefronts via Liquid file modifications.</li>
+                                            <li>Modifying custom Shopify & BigCommerce apps using Laravel.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="job_title">Web Developer (Remote)</a>
+                                        <a href="#" class="pull-right"> <small>Sep, 2024 – Feb, 2025</small> </a>
+                                        <p> <b>Organization:</b> TechHubPS (USA)</p>
+                                        <ul>
+                                            <li>Developed and maintained web applications.</li>
+                                            <li>Provided remote technical support and troubleshooting.</li>
+                                            <li>Collaborated with cross-functional teams on technical projects.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="job_title">Web Application Developer (Remote)</a>
+                                        <a href="#" class="pull-right"> <small>Mar, 2023 – Aug, 2024</small> </a>
+                                        <p> <b>Organization:</b> Vibetag Ltd (UK)</p>
+                                        <ul>
+                                            <li>Designed and developed complex web applications with creative, user-friendly interfaces.</li>
+                                            <li>Collaborated with teams to gather requirements and create responsive designs.</li>
+                                            <li>Developed APIs for mobile apps to optimize functionality and user experience.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
                                         <a href="#" class="job_title">Senior Executive Programmer</a>
-                                        <a href="#" class="pull-right"> <small>20 December, 2021 - Present</small> </a>
-                                        <p> <b>Department:</b> IT & MIS</p>
-                                        <p> <b>Organization:</b> Swisstex Group Ltd</p>
-                                        <p> <b>Responsibilities:</b>
-                                            <ul>
-                                                <li>Working on an existing ERP System on further development and bug fixing</li>
-                                                <li>Providing client support</li>
-                                                <li>Working on several web development projects of Sister Concerns of Swisstex Group</li>
-                                            </ul>
-                                        </p>
+                                        <a href="#" class="pull-right"> <small>Dec, 2021 – Dec, 2022</small> </a>
+                                        <p> <b>Organization:</b> Swiss Tex Ltd</p>
+                                        <ul>
+                                            <li>Enhanced ERP system functionalities and fixed bugs.</li>
+                                            <li>Provided timely client support to ensure satisfaction.</li>
+                                            <li>Developed web projects for Swisstex Group's sister concerns.</li>
+                                        </ul>
                                     </li>
                                     <li>
                                         <a href="#" class="job_title">Officer (MIS)</a>
-                                        <a href="#" class="pull-right"><small>19 May, 2019 - 19 December, 2021</small> </a>
-                                        <p> <b>Department:</b> Credit Risk Management</p>
+                                        <a href="#" class="pull-right"> <small>May, 2019 – Dec, 2021</small> </a>
                                         <p> <b>Organization:</b> The City Bank Ltd</p>
-                                        <p> <b>Responsibilities:</b>
-                                            <ul>
-                                                <li>Worked with several sensitive databases like – SME-M, Commercial, Corporate Loans List, Daily and Monthly Loan Approvals List, Loan CRG & ICRR rating List, Weekly Under Process Loans List, etc</li>
-                                                <li>Prepare several types of reports from those databases for management's decision.</li>
-                                                <li>Worked closely with IT division on development of a Web Application named - Loan Proposal Tracking System (LPTS).</li>
-                                            </ul>
-                                        </p>
+                                        <ul>
+                                            <li>Managed sensitive loan databases (SME-M, Commercial, Corporate).</li>
+                                            <li>Generated strategic reports to support management decisions.</li>
+                                            <li>Collaborated with IT to develop the Loan Proposal Tracking System (LPTS).</li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
-                            <h3 class="gradient">
-                                Other Experience
-                            </h3>
+                            <h3 class="gradient">Other Experience</h3>
                             <hr>
-                            <div class="col-md-12">
-                                <ul class="">
-                                    <li>Completed a three-month internship period in Bangladesh Bank’s Information Systems Development Department (ISDD).</li>
-                                    <li>Solved more than 25 programming problems in UVa Online Judge platform.</li>
-                                </ul>
+                            <div class="numbered-list">
+                                <div class="numbered-card">
+                                    <div class="numbered-header">
+                                        <span class="numbered-idx">01</span>
+                                        <span class="numbered-title">Independent Web Consulting</span>
+                                    </div>
+                                    <p class="numbered-desc">139+ projects delivered globally with a 5★ average rating, helping businesses build scalable web solutions.</p>
+                                </div>
+                                <div class="numbered-card">
+                                    <div class="numbered-header">
+                                        <span class="numbered-idx">02</span>
+                                        <span class="numbered-title">Internship · Bangladesh Bank</span>
+                                    </div>
+                                    <p class="numbered-desc">3-month tenure at the Information Systems Development Department (ISDD), contributing to enterprise software initiatives.</p>
+                                </div>
+                                <div class="numbered-card">
+                                    <div class="numbered-header">
+                                        <span class="numbered-idx">03</span>
+                                        <span class="numbered-title">Competitive Programming · UVa Online Judge</span>
+                                    </div>
+                                    <p class="numbered-desc">Solved 25+ algorithmic challenges, sharpening problem-solving skills across data structures and logic design.</p>
+                                </div>
+                                <div class="numbered-card">
+                                    <div class="numbered-header">
+                                        <span class="numbered-idx">04</span>
+                                        <span class="numbered-title">Research · m-price Project</span>
+                                    </div>
+                                    <p class="numbered-desc">Collaborated with Dr. Nabeel Mohammed on a pricing intelligence research project involving data analysis and system design.</p>
+                                </div>
+                                <div class="numbered-card">
+                                    <div class="numbered-header">
+                                        <span class="numbered-idx">05</span>
+                                        <span class="numbered-title">Cognitive Research · Indian Statistical Institute</span>
+                                    </div>
+                                    <p class="numbered-desc">Long-term online research project with Dr. Garga Chatterjee exploring cognitive performance and behavioural patterns.</p>
+                                </div>
+                                <div class="numbered-card">
+                                    <div class="numbered-header">
+                                        <span class="numbered-idx">06</span>
+                                        <span class="numbered-title">Swarm Robotics · Multi-Robot System</span>
+                                    </div>
+                                    <p class="numbered-desc">Designed a Search &amp; Rescue simulation using NetLogo under Dr. Sifat Momen, applying swarm intelligence principles.</p>
+                                </div>
                             </div>
-                            <h3 class="gradient">
-                                Training & Certification
-                            </h3>
+
+                            <h3 class="gradient cert-heading">Training &amp; Certification</h3>
                             <hr>
-                            <div class="col-md-12">
-                                <ul class="">
-                                    <li>“Augmented Reality Course” under BHTPA.</li>
-                                    <li>“Web Development Course” under LICT, naming “Top-Up”.</li>
-                                    <li>“Excel Professional Course” from 10MinutesSchool</li>
-                                    <li>"Frontend Development with React.js" from Online (Ongoing)</li>
-                                    <li>"Oracle Certified Professional (OCP) 12c: DBA" from IBCS Primax Ltd (Fundamentals Only)</li>
-                                </ul>
+                            <div class="numbered-list">
+                                <div class="numbered-card">
+                                    <div class="numbered-header">
+                                        <span class="numbered-idx">01</span>
+                                        <span class="numbered-title">IELTS <span class="numbered-badge">Score: 7.5</span></span>
+                                    </div>
+                                    <p class="numbered-desc">International English Language Testing System — achieved an overall band score of 7.5, demonstrating advanced proficiency.</p>
+                                </div>
+                                <div class="numbered-card">
+                                    <div class="numbered-header">
+                                        <span class="numbered-idx">02</span>
+                                        <span class="numbered-title">Augmented Reality Course</span>
+                                    </div>
+                                    <p class="numbered-desc">Completed an immersive AR development course under BHTPA, exploring mixed reality applications and tooling.</p>
+                                </div>
+                                <div class="numbered-card">
+                                    <div class="numbered-header">
+                                        <span class="numbered-idx">03</span>
+                                        <span class="numbered-title">Web Development Course</span>
+                                    </div>
+                                    <p class="numbered-desc">Top-Up program under LICT covering modern web technologies, full-stack practices and industry workflows.</p>
+                                </div>
+                                <div class="numbered-card">
+                                    <div class="numbered-header">
+                                        <span class="numbered-idx">04</span>
+                                        <span class="numbered-title">Excel Professional Course</span>
+                                    </div>
+                                    <p class="numbered-desc">Advanced spreadsheet and data analysis certification from 10MinutesSchool covering formulas, pivots and dashboards.</p>
+                                </div>
+                                <div class="numbered-card">
+                                    <div class="numbered-header">
+                                        <span class="numbered-idx">05</span>
+                                        <span class="numbered-title">Oracle Certified Professional (OCP) 12c: DBA</span>
+                                    </div>
+                                    <p class="numbered-desc">First module of Oracle's professional DBA certification, covering database architecture, administration and SQL tuning.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -269,268 +378,311 @@
                             Skills
                         </h3>
                         <hr>
-                        <div class="skill-image">
-                            <div class="html"><img src="images/icons/html-5.png" alt></div>
-                            <div class="css"><img src="images/icons/css-3.png" alt></div>
-                            <div class="js"><img src="images/icons/js.png" alt></div>
-                            <div class="mysql"><img src="images/icons/mysql.png" alt></div>
-                            <div class="php"><img src="images/icons/php.png" alt></div>
-                            <div class="bootstrap"><img src="images/icons/bootstrap.png" alt></div>
-                            <div class="msc"><img src="images/icons/Materializecss.png" alt></div>
-                            <div class="react"><img src="images/icons/react.png" alt></div>
-                            <div class="laravel"><img src="images/icons/laravel.png" alt></div>
-                            <div class="asp"><img src="images/icons/asp.png" alt></div>
-                            <div class="wp"><img src="images/icons/wordpress.png" alt></div>
-                            <div class="oracle"><img src="images/icons/oracle.png" alt></div>
+                        <div class="skill-tags-section">
+                            <div class="skill-tag-group">
+                                <span class="skill-tag-label">Programming Languages</span>
+                                <div class="skill-tags">
+                                    <span>C</span><span>C++</span><span>PHP</span><span>JavaScript</span>
+                                </div>
+                            </div>
+                            <div class="skill-tag-group">
+                                <span class="skill-tag-label">Database</span>
+                                <div class="skill-tags">
+                                    <span>MySQL</span><span>SQLite</span><span>Oracle (Fundamentals)</span>
+                                </div>
+                            </div>
+                            <div class="skill-tag-group">
+                                <span class="skill-tag-label">Web Design</span>
+                                <div class="skill-tags">
+                                    <span>HTML</span><span>CSS</span><span>WordPress</span><span>Wix</span><span>Shopify</span>
+                                </div>
+                            </div>
+                            <div class="skill-tag-group">
+                                <span class="skill-tag-label">Frameworks</span>
+                                <div class="skill-tags">
+                                    <span>Bootstrap</span><span>TailwindCSS</span><span>MaterializeCSS</span><span>Laravel</span><span>Vue.js</span><span>React.js</span>
+                                </div>
+                            </div>
+                            <div class="skill-tag-group">
+                                <span class="skill-tag-label">Microsoft Office</span>
+                                <div class="skill-tags">
+                                    <span>PowerPoint</span><span>Word</span><span>Excel</span><span>Access</span>
+                                </div>
+                            </div>
+                            <div class="skill-tag-group">
+                                <span class="skill-tag-label">Others</span>
+                                <div class="skill-tags">
+                                    <span>Adobe Photoshop</span><span>Adobe Illustrator</span>
+                                </div>
+                            </div>
+                            <div class="skill-tag-group">
+                                <span class="skill-tag-label">Servers</span>
+                                <div class="skill-tags">
+                                    <span>Apache</span><span>AWS</span><span>Cloudways</span>
+                                </div>
+                            </div>
                         </div>
                         <h3 class="gradient">
                             Portfolio
                         </h3>
                         <hr>
-                        <div class="">
-                            <div class="row">
-                                <div class="">
-                                    <ul class="filters text-center">
-                                        <li class="active" data-bs-filter="*">
-                                            <a href="#!"><i class="fas fa-star-of-life"></i> All</a>
-                                        </li>
-                                        <li data-bs-filter=".ecommerce">
-                                            <a href="#!"><i class="fas fa-laptop-code"></i> E-commerce</a>
-                                        </li>
-                                        <li data-bs-filter=".business">
-                                            <a href="#!"><i class="fas fa-globe"></i> Business Website</a>
-                                        </li>
-                                        <li data-bs-filter=".others">
-                                            <a href="#!"><i class="far fa-object-group"></i> Others</a>
-                                        </li>
-                                    </ul>
+                        <ul class="pf-filters">
+                            <li class="active" data-bs-filter="*">All</li>
+                            <li data-bs-filter=".ecommerce">E-commerce</li>
+                            <li data-bs-filter=".business">Business</li>
+                            <li data-bs-filter=".others">Others</li>
+                        </ul>
 
-                                    <div class="projects">
-                                        <div class="row">
-                                            <div class="col-lg-6 item ecommerce html_language css_language js_language mysql_language laravel_language responsive">
-                                                <div class="project">
-                                                    <div class="project-head">
-                                                        <img src="images/portfolio/brandshop-gig.jpg" alt="" class="img-fluid card-img">
-                                                        <!-- <div class="project-overlay">
-                                                            <h4>NHT Brandshop</h4>
-                                                        </div> -->
-                                                        <div class="project-hover">
-                                                            <p>
-                                                                E-commerce Website Design & Developement
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="project-body text-center">
-                                                        <h3 class="title">NHT Brandshop</h3>
-
-                                                        <ul class="filters filters-tag text-center">
-                                                            tag:
-                                                            <li data-bs-filter=".html_language"><a href="#!">HTML</a></li>
-                                                            <li data-bs-filter=".css_language"><a href="#!">CSS</a></li>
-                                                            <li data-bs-filter=".js_language"><a href="#!">JS</a></li>
-                                                            <li data-bs-filter=".mysql_language"><a href="#!">MySql</a></li>
-                                                            <li data-bs-filter=".laravel_language"><a href="#!">Laravel</a></li>
-                                                            <li data-bs-filter=".responsive"><a href="#!">Responsive</a></li>
-                                                        </ul>
-
-                                                        <div class="btn-group" role="group">
-                                                            <a href="#!" class="btn project-btn"><i class="fas fa-file-download"></i> Download</a>
-                                                            <a href="#!" class="btn project-btn disabled"><i class="far fa-eye-slash"></i> View</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6 item ecommerce html_language css_language js_language mysql_language laravel_language responsive">
-                                                <div class="project">
-                                                    <div class="project-head">
-                                                        <img src="images/portfolio/shilpabangla-gig.jpg" alt="" class="img-fluid card-img">
-                                                        <!-- <div class="project-overlay">
-                                                            <h4>NHT Brandshop</h4>
-                                                        </div> -->
-                                                        <div class="project-hover">
-                                                            <p>
-                                                                E-commerce Website Design & Developement
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="project-body text-center">
-                                                        <h3 class="title">Shilpabangla</h3>
-
-                                                        <ul class="filters filters-tag text-center">
-                                                            tag:
-                                                            <li data-bs-filter=".html_language"><a href="#!">HTML</a></li>
-                                                            <li data-bs-filter=".css_language"><a href="#!">CSS</a></li>
-                                                            <li data-bs-filter=".js_language"><a href="#!">JS</a></li>
-                                                            <li data-bs-filter=".mysql_language"><a href="#!">MySql</a></li>
-                                                            <li data-bs-filter=".laravel_language"><a href="#!">Laravel</a></li>
-                                                            <li data-bs-filter=".responsive"><a href="#!">Responsive</a></li>
-                                                        </ul>
-
-                                                        <div class="btn-group" role="group">
-                                                            <a href="#!" class="btn project-btn"><i class="fas fa-file-download"></i> Download</a>
-                                                            <a href="#!" class="btn project-btn disabled"><i class="far fa-eye-slash"></i> View</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6 item business html_language css_language js_language mysql_language laravel_language responsive">
-                                                <div class="project">
-                                                    <div class="project-head">
-                                                        <img src="images/portfolio/Ivypro.jpg" alt="" class="img-fluid card-img">
-                                                        <!-- <div class="project-overlay">
-                                                            <h2>Eduzenship</h2>
-                                                        </div> -->
-                                                        <div class="project-hover">
-                                                            <p>
-                                                                A Student Consultancy Firm Website Design & Development
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="project-body text-center">
-                                                        <h3 class="title">Eduzenship</h3>
-
-                                                        <ul class="filters filters-tag text-center">
-                                                            tag:
-                                                            <li data-bs-filter=".html_language"><a href="#!">HTML</a></li>
-                                                            <li data-bs-filter=".css_language"><a href="#!">CSS</a></li>
-                                                            <li data-bs-filter=".js_language"><a href="#!">JS</a></li>
-                                                            <li data-bs-filter=".mysql_language"><a href="#!">MySql</a></li>
-                                                            <li data-bs-filter=".laravel_language"><a href="#!">Laravel</a></li>
-                                                            <li data-bs-filter=".responsive"><a href="#!">Responsive</a></li>
-                                                        </ul>
-
-                                                        <div class="btn-group" role="group">
-                                                            <a href="#!" class="btn  project-btn"><i class="fas fa-code"></i> Code</a>
-                                                            <a href="https://eduzenship.com/" class="btn  project-btn"><i class="far fa-eye"></i> View</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6 item business html_language css_language js_language mysql_language laravel_language responsive">
-                                                <div class="project">
-                                                    <div class="project-head">
-                                                        <img src="images/portfolio/set-gig.jpg" alt="" class="img-fluid card-img">
-                                                        <!-- <div class="project-overlay">
-                                                            <h2>Eduzenship</h2>
-                                                        </div> -->
-                                                        <div class="project-hover">
-                                                            <p>
-                                                                A Premium Laundry Service Website Design & Developement
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="project-body text-center">
-                                                        <h3 class="title">SET</h3>
-
-                                                        <ul class="filters filters-tag text-center">
-                                                            tag:
-                                                            <li data-bs-filter=".html_language"><a href="#!">HTML</a></li>
-                                                            <li data-bs-filter=".css_language"><a href="#!">CSS</a></li>
-                                                            <li data-bs-filter=".js_language"><a href="#!">JS</a></li>
-                                                            <li data-bs-filter=".mysql_language"><a href="#!">MySql</a></li>
-                                                            <li data-bs-filter=".laravel_language"><a href="#!">Laravel</a></li>
-                                                            <li data-bs-filter=".responsive"><a href="#!">Responsive</a></li>
-                                                        </ul>
-
-                                                        <div class="btn-group" role="group">
-                                                            <a href="#!" class="btn  project-btn"><i class="fas fa-code"></i> Code</a>
-                                                            <a href="http://fiverr.eduzenship.com/" class="btn  project-btn"><i class="far fa-eye"></i> View</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6 item business html_language css_language js_language mysql_language laravel_language responsive">
-                                                <div class="project">
-                                                    <div class="project-head">
-                                                        <img src="images/portfolio/main_affordable-gig.jpg" alt="" class="img-fluid card-img">
-                                                        <!-- <div class="project-overlay">
-                                                            <h2>Eduzenship</h2>
-                                                        </div> -->
-                                                        <div class="project-hover">
-                                                            <p>
-                                                                A Rent-a-car Business Website Design & Development
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="project-body text-center">
-                                                        <h3 class="title">Alt Florida</h3>
-
-                                                        <ul class="filters filters-tag text-center">
-                                                            tag:
-                                                            <li data-bs-filter=".html_language"><a href="#!">HTML</a></li>
-                                                            <li data-bs-filter=".css_language"><a href="#!">CSS</a></li>
-                                                            <li data-bs-filter=".js_language"><a href="#!">JS</a></li>
-                                                            <li data-bs-filter=".mysql_language"><a href="#!">MySql</a></li>
-                                                            <li data-bs-filter=".laravel_language"><a href="#!">Laravel</a></li>
-                                                            <li data-bs-filter=".responsive"><a href="#!">Responsive</a></li>
-                                                        </ul>
-
-                                                        <div class="btn-group" role="group">
-                                                            <a href="#!" class="btn  project-btn"><i class="fas fa-code"></i> Code</a>
-                                                            <a href="#!" class="btn  project-btn"><i class="far fa-eye"></i> View</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6 item others html_language css_language js_language mysql_language laravel_language responsive">
-                                                <div class="project">
-                                                    <div class="project-head">
-                                                        <img src="images/portfolio/tad.jpg" alt="" class="img-fluid card-img">
-                                                        <!-- <div class="project-overlay">
-                                                            <h2>Others</h2>
-                                                        </div> -->
-                                                        <div class="project-hover">
-                                                            <p>
-                                                                Client-Coach Exam Portal
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="project-body text-center">
-                                                        <h3 class="title">TAD</h3>
-
-                                                        <ul class="filters filters-tag text-center">
-                                                            tag:
-                                                            <li data-bs-filter=".html_language"><a href="#!">HTML</a></li>
-                                                            <li data-bs-filter=".css_language"><a href="#!">CSS</a></li>
-                                                            <li data-bs-filter=".js_language"><a href="#!">JS</a></li>
-                                                            <li data-bs-filter=".mysql_language"><a href="#!">MySql</a></li>
-                                                            <li data-bs-filter=".laravel_language"><a href="#!">Laravel</a></li>
-                                                            <li data-bs-filter=".responsive"><a href="#!">Responsive</a></li>
-                                                        </ul>
-
-                                                        <div class="btn-group" role="group">
-                                                            <a href="#!" class="btn  project-btn"><i class="fas fa-code"></i> Code</a>
-                                                            <a href="http://freelancing.eduzenship.com/" class="btn  project-btn"><i class="far fa-eye"></i> View</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                        <div class="projects pf-grid">
+                            <div class="item ecommerce">
+                                <div class="pf-card">
+                                    <div class="pf-img-wrap">
+                                        <img src="images/portfolio/brandshop-gig.jpg" alt="NHT Brandshop" class="pf-img">
+                                        <div class="pf-overlay">
+                                            <span class="pf-cat">E-commerce</span>
+                                            <h4 class="pf-overlay-title">NHT Brandshop</h4>
+                                            <p class="pf-overlay-desc">E-commerce Website Design &amp; Development</p>
+                                            <div class="pf-actions">
+                                                <a href="#!" class="pf-btn"><i class="bi bi-eye"></i> Preview</a>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="pf-footer">
+                                        <span class="pf-title">NHT Brandshop</span>
+                                        <div class="pf-tags"><span>Laravel</span><span>MySQL</span><span>JS</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item ecommerce">
+                                <div class="pf-card">
+                                    <div class="pf-img-wrap">
+                                        <img src="images/portfolio/shilpabangla-gig.jpg" alt="Shilpabangla" class="pf-img">
+                                        <div class="pf-overlay">
+                                            <span class="pf-cat">E-commerce</span>
+                                            <h4 class="pf-overlay-title">Shilpabangla</h4>
+                                            <p class="pf-overlay-desc">E-commerce Website Design &amp; Development</p>
+                                            <div class="pf-actions">
+                                                <a href="#!" class="pf-btn"><i class="bi bi-eye"></i> Preview</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pf-footer">
+                                        <span class="pf-title">Shilpabangla</span>
+                                        <div class="pf-tags"><span>Laravel</span><span>MySQL</span><span>CSS</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item business">
+                                <div class="pf-card">
+                                    <div class="pf-img-wrap">
+                                        <img src="images/portfolio/Ivypro.jpg" alt="Eduzenship" class="pf-img">
+                                        <div class="pf-overlay">
+                                            <span class="pf-cat">Business</span>
+                                            <h4 class="pf-overlay-title">Eduzenship</h4>
+                                            <p class="pf-overlay-desc">Student Consultancy Firm Website</p>
+                                            <div class="pf-actions">
+                                                <a href="https://eduzenship.com/" target="_blank" class="pf-btn"><i class="bi bi-box-arrow-up-right"></i> Live</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pf-footer">
+                                        <span class="pf-title">Eduzenship</span>
+                                        <div class="pf-tags"><span>Laravel</span><span>MySQL</span><span>JS</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item business">
+                                <div class="pf-card">
+                                    <div class="pf-img-wrap">
+                                        <img src="images/portfolio/set-gig.jpg" alt="SET" class="pf-img">
+                                        <div class="pf-overlay">
+                                            <span class="pf-cat">Business</span>
+                                            <h4 class="pf-overlay-title">SET</h4>
+                                            <p class="pf-overlay-desc">Premium Laundry Service Website</p>
+                                            <div class="pf-actions">
+                                                <a href="http://fiverr.eduzenship.com/" target="_blank" class="pf-btn"><i class="bi bi-box-arrow-up-right"></i> Live</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pf-footer">
+                                        <span class="pf-title">SET</span>
+                                        <div class="pf-tags"><span>Laravel</span><span>PHP</span><span>CSS</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item business">
+                                <div class="pf-card">
+                                    <div class="pf-img-wrap">
+                                        <img src="images/portfolio/main_affordable-gig.jpg" alt="Alt Florida" class="pf-img">
+                                        <div class="pf-overlay">
+                                            <span class="pf-cat">Business</span>
+                                            <h4 class="pf-overlay-title">Alt Florida</h4>
+                                            <p class="pf-overlay-desc">Rent-a-car Business Website</p>
+                                            <div class="pf-actions">
+                                                <a href="#!" class="pf-btn"><i class="bi bi-eye"></i> Preview</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pf-footer">
+                                        <span class="pf-title">Alt Florida</span>
+                                        <div class="pf-tags"><span>Laravel</span><span>MySQL</span><span>JS</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item others">
+                                <div class="pf-card">
+                                    <div class="pf-img-wrap">
+                                        <img src="images/portfolio/tad.jpg" alt="TAD" class="pf-img">
+                                        <div class="pf-overlay">
+                                            <span class="pf-cat">Others</span>
+                                            <h4 class="pf-overlay-title">TAD</h4>
+                                            <p class="pf-overlay-desc">Client-Coach Exam Portal</p>
+                                            <div class="pf-actions">
+                                                <a href="http://freelancing.eduzenship.com/" target="_blank" class="pf-btn"><i class="bi bi-box-arrow-up-right"></i> Live</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pf-footer">
+                                        <span class="pf-title">TAD</span>
+                                        <div class="pf-tags"><span>Laravel</span><span>PHP</span><span>MySQL</span></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                    <div id="Section4" class="contactDiv" style="display:none;">
-                        <h3 class="gradient">
-                            Contact
-                        </h3>
+                    <div id="Section5" class="educationDiv" style="display:none;">
+                        <h3 class="gradient">Education</h3>
                         <hr>
-                        <div class="col-md-12">
-                            <p>Under Construction...............!</p>
+
+                        <div class="edu-cards">
+                            <div class="edu-card">
+                                <div class="edu-icon"><i class="bi bi-award"></i></div>
+                                <div class="edu-body">
+                                    <span class="edu-degree">M.Sc. in Computer Science &amp; Engineering</span>
+                                    <span class="edu-inst">Jahangirnagar University</span>
+                                    <div class="edu-meta">
+                                        <span class="edu-year"><i class="bi bi-calendar3"></i> Passing Year: 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="edu-card">
+                                <div class="edu-icon"><i class="bi bi-award"></i></div>
+                                <div class="edu-body">
+                                    <span class="edu-degree">B.Sc. in Computer Science &amp; Engineering</span>
+                                    <span class="edu-inst">Jahangirnagar University</span>
+                                    <div class="edu-meta">
+                                        <span class="edu-year"><i class="bi bi-calendar3"></i> Passing Year: 2018</span>
+                                    </div>
+                                    <span class="edu-group">Minor: Electronics &amp; Telecommunication Engineering</span>
+                                </div>
+                            </div>
+                            <div class="edu-card">
+                                <div class="edu-icon"><i class="bi bi-building"></i></div>
+                                <div class="edu-body">
+                                    <span class="edu-degree">HSC — Higher Secondary Certificate</span>
+                                    <span class="edu-inst">Northern College Bangladesh</span>
+                                    <div class="edu-meta">
+                                        <span class="edu-year"><i class="bi bi-calendar3"></i> Passing Year: 2013</span>
+                                    </div>
+                                    <span class="edu-group">Group: Science</span>
+                                </div>
+                            </div>
+                            <div class="edu-card">
+                                <div class="edu-icon"><i class="bi bi-book"></i></div>
+                                <div class="edu-body">
+                                    <span class="edu-degree">SSC — Secondary School Certificate</span>
+                                    <span class="edu-inst">St. Joseph's High School</span>
+                                    <div class="edu-meta">
+                                        <span class="edu-year"><i class="bi bi-calendar3"></i> Passing Year: 2011</span>
+                                    </div>
+                                    <span class="edu-group">Group: Science</span>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+
+                    <div id="Section4" class="contactDiv" style="display:none;">
+                        <h3 class="gradient">Contact</h3>
+                        <hr>
+                        <p class="contact-intro">Feel free to reach out for collaborations, remote opportunities, or projects.</p>
+
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <i class="bi bi-envelope-fill"></i>
+                                <div>
+                                    <h6>Email</h6>
+                                    <a href="mailto:nahidhtamim@gmail.com">nahidhtamim@gmail.com</a>
+                                    <a href="mailto:nahid@nhtamim.top" class="contact-email-2">nahid@nhtamim.top</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="bi bi-telephone-fill"></i>
+                                <div>
+                                    <h6>Phone</h6>
+                                    <a href="tel:+8801687390766">+880-1687390766</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="bi bi-whatsapp"></i>
+                                <div>
+                                    <h6>WhatsApp</h6>
+                                    <a href="https://wa.me/8801687390766" target="_blank">+880-1687390766</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <div>
+                                    <h6>Location</h6>
+                                    <p>Dhaka, Bangladesh</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-socials">
+                            <a href="https://github.com/nahidhtamim" target="_blank" class="contact-social-btn" title="GitHub">
+                                <i class="bi bi-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/nahidhtamim" target="_blank" class="contact-social-btn" title="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.nhtamim.top" target="_blank" class="contact-social-btn" title="Website">
+                                <i class="bi bi-globe"></i>
+                                <span>Website</span>
+                            </a>
+                        </div>
+
+                        <h6 class="contact-form-title">Send a Message</h6>
+                        <form class="contact-form" action="https://formspree.io/f/nahidhtamim@gmail.com" method="POST">
+                            <div class="cf-row">
+                                <div class="cf-group">
+                                    <label for="cf-name">Name</label>
+                                    <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+                                </div>
+                                <div class="cf-group">
+                                    <label for="cf-email">Email</label>
+                                    <input type="email" id="cf-email" name="email" placeholder="your@email.com" required>
+                                </div>
+                            </div>
+                            <div class="cf-group">
+                                <label for="cf-subject">Subject</label>
+                                <input type="text" id="cf-subject" name="subject" placeholder="What's this about?">
+                            </div>
+                            <div class="cf-group">
+                                <label for="cf-message">Message</label>
+                                <textarea id="cf-message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                            </div>
+                            <button type="submit" class="cf-submit">
+                                <i class="bi bi-send"></i> Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
 
