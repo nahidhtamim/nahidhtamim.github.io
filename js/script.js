@@ -245,3 +245,31 @@ function hide() {
 
     updateCorners(visibleId);
 })();
+
+// Light / Dark mode toggle
+(function() {
+    var btn = document.getElementById('theme-toggle');
+    var icon = document.getElementById('theme-icon');
+    if (!btn) return;
+
+    function applyTheme(mode) {
+        if (mode === 'light') {
+            document.body.classList.add('light-mode');
+            icon.className = 'bi bi-moon-fill';
+            btn.querySelector('span').textContent = 'Dark';
+        } else {
+            document.body.classList.remove('light-mode');
+            icon.className = 'bi bi-sun-fill';
+            btn.querySelector('span').textContent = 'Light';
+        }
+    }
+
+    // Restore saved preference
+    applyTheme(localStorage.getItem('theme') || 'dark');
+
+    btn.addEventListener('click', function() {
+        var next = document.body.classList.contains('light-mode') ? 'dark' : 'light';
+        localStorage.setItem('theme', next);
+        applyTheme(next);
+    });
+})();
