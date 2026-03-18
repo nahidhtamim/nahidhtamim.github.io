@@ -6,715 +6,492 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NHT Portfolio</title>
-
-    <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-
 </head>
 
 <body>
-    <section class="main-div">
-        <div class="container">
-            <div class="row">
+    <div class="library-glow"></div>
 
-                <!--==============================
-                    SideNav Starts
-                !=================================-->
+    <main class="book-stage">
+        <aside class="chapter-rail" aria-label="Portfolio chapters">
+            <a href="#Section1" class="rail-link active-nav" data-target="Section1">
+                <i class="bi bi-house-door"></i>
+                <span>Intro</span>
+            </a>
+            <a href="#Section2" class="rail-link" data-target="Section2">
+                <i class="bi bi-briefcase"></i>
+                <span>Career</span>
+            </a>
+            <a href="#Section5" class="rail-link" data-target="Section5">
+                <i class="bi bi-mortarboard"></i>
+                <span>Study</span>
+            </a>
+            <a href="#Section3" class="rail-link" data-target="Section3">
+                <i class="bi bi-code-slash"></i>
+                <span>Works</span>
+            </a>
+            <a href="#Section4" class="rail-link" data-target="Section4">
+                <i class="bi bi-envelope-paper"></i>
+                <span>Contact</span>
+            </a>
+        </aside>
 
-                <div class="col-sm-auto col-lg-auto sticky-top sidenav">
-                    <div class="d-flex flex-sm-column flex-row flex-nowrap align-items-center sticky-top mb-4 sidenav-btn">
-                        <div class="sidenav-logo">
-                            <img src="images/nht-logo.svg" alt="NHT" width="52" height="52" />
-                        </div>
-                        <div class="sidenav-divider"></div>
-                        <ul class="nav nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center w-100 align-items-center sidenav-nav">
-                            <li class="nav-item">
-                                <a href="#Section1" class="nav-link sidenav-link about active-nav" id="about" onclick="show('Section1');">
-                                    <i class="bi bi-person-circle"></i>
-                                    <span>About</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#Section2" class="nav-link sidenav-link resume" id="resume" onclick="show('Section2');">
-                                    <i class="bi bi-briefcase"></i>
-                                    <span>Experience</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#Section5" class="nav-link sidenav-link education" id="education" onclick="show('Section5');">
-                                    <i class="bi bi-award"></i>
-                                    <span>Education</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#Section3" class="nav-link sidenav-link work" id="work" onclick="show('Section3');">
-                                    <i class="bi bi-code-slash"></i>
-                                    <span>Skills</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#Section4" class="nav-link sidenav-link contact" id="contact" onclick="show('Section4');">
-                                    <i class="bi bi-envelope"></i>
-                                    <span>Contact</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="sidenav-divider"></div>
-                        <button class="theme-toggle" id="theme-toggle" title="Toggle light/dark mode">
-                            <i class="bi bi-sun-fill" id="theme-icon"></i>
-                            <span>Light</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!--==============================
-                    SideNav Ends
-                !=================================-->
-
-                <!--==============================
-                    Info Card Starts
-                !=================================-->
-
-                <div class="col-sm col-lg-5 pb-2">
-                    <div class="d-flex ">
-                        <div class="card info-card">
-                            <div class="background-block">
-                                <img src="images/cover.jpg" alt="cover" class="background" />
-                            </div>
-                            <div class="profile-thumb-block">
-                                <img src="images/profile.jpeg" alt="profile-image" class="profile" />
-                            </div>
-                            <div class="card-content">
-                                <h2>Md. Nahid Hasan Tamim</h2>
-                                <div>
-                                    <h5>I am a <span id="profession" class="gradient">Backend Developer</span></h5>
-                                </div>
-                                <div class="icon-block">
-                                    <a href="https://github.com/nahidhtamim" target="_blank"><i class="bi bi-github"></i></a>
-                                    <a href="mailto:nahidhtamim@gmail.com"><i class="bi bi-envelope"></i></a>
-                                    <a href="https://www.linkedin.com/in/nahidhtamim" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                </div>
-                                <div class="c2a-btn footer-c2a-btn">
-                                    <div class="btn-group btn-group-lg" role="group" aria-label="Call to action">
-                                        <a type="button" class="btn btn-default btn-lg" href="Resume - MD. Nahid Hasan Tamim.pdf" download>Download CV</a>
-                                        <span class="btn-circle btn-or">or</span>
-                                        <a type="button" class="btn btn-default btn-lg" href="#Section4" onclick="show('Section4')">Contact Me</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--==============================
-                    Info Card Ends
-                !=================================-->
-
-                <!--==============================
-                    Details Section Starts
-                !=================================-->
-
-                <div class="col-sm details col-lg-6">
-                    <div id="Section1" class="aboutDiv" style="display:block;">
-                        <h3 class="gradient">About Me</h3>
-                        <hr>
-                        <p>A full-stack web developer with <strong>6+ years</strong> of experience across banking, fintech, and international tech firms in the USA and UK. Currently Backend Developer at <strong>Coalition Technologies (USA)</strong>, specializing in Laravel, Shopify, and scalable web applications.</p>
-                        <!-- <p>Freelance Level 2 seller on Fiverr with a 5-star track record, blending technical depth with strong communication to deliver results that exceed expectations.</p> -->
-
-                        <div class="about-stats">
-                            <div class="about-stat-featured">
-                                <span class="featured-num">6+</span>
-                                <div>
-                                    <span class="featured-label">Years Of</span>
-                                    <span class="featured-label-bold">Experience</span>
-                                </div>
-                                <p>Full-stack development across banking, fintech & international tech firms in USA & UK.</p>
-                            </div>
-                            <div class="about-stat-grid">
-                                <div class="about-stat-card">
-                                    <span class="stat-card-num">139+</span>
-                                    <span class="stat-card-label">Projects Done</span>
-                                </div>
-                                <div class="about-stat-card">
-                                    <span class="stat-card-num">101+</span>
-                                    <span class="stat-card-label">Client Reviews</span>
-                                </div>
-                                <div class="about-stat-card">
-                                    <span class="stat-card-num">75+</span>
-                                    <span class="stat-card-label">Happy Clients</span>
-                                </div>
-                                <div class="about-stat-card">
-                                    <span class="stat-card-num">5★</span>
-                                    <span class="stat-card-label">Average Rating</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="expertise-section">
-                            <h6 class="expertise-title">What I Do</h6>
-                            <div class="service-grid">
-                                <div class="service-card">
-                                    <i class="bi bi-palette2 service-icon"></i>
-                                    <span class="service-name">Web Design</span>
-                                    <span class="service-desc">Clean, modern interfaces built for impact</span>
-                                </div>
-                                <div class="service-card">
-                                    <i class="bi bi-braces service-icon"></i>
-                                    <span class="service-name">Web Development</span>
-                                    <span class="service-desc">Robust, scalable apps from front to back</span>
-                                </div>
-                                <div class="service-card">
-                                    <i class="bi bi-kanban service-icon"></i>
-                                    <span class="service-name">Project Management</span>
-                                    <span class="service-desc">On-time delivery with clear communication</span>
-                                </div>
-                                <div class="service-card">
-                                    <i class="bi bi-lightbulb service-icon"></i>
-                                    <span class="service-name">Consultancy</span>
-                                    <span class="service-desc">Strategic guidance to turn ideas into products</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="reviews-section">
-                            <h6 class="reviews-title">Client Reviews</h6>
-                            <div class="reviews-slider-wrap">
-                                <button class="reviews-arrow reviews-arrow-prev" aria-label="Previous">&#8249;</button>
-                                <div class="reviews-track-outer">
-                                    <div class="reviews-track">
-                                        <div class="review-card">
-                                            <div class="review-stars">★★★★★</div>
-                                            <p class="review-text">"Exceptional work on our Laravel e-commerce platform. Delivered ahead of schedule with clean, well-documented code. Highly professional."</p>
-                                            <div class="review-author">
-                                                <span class="review-name">James R.</span>
-                                                <span class="review-platform">USA · Fiverr</span>
-                                            </div>
-                                        </div>
-                                        <div class="review-card">
-                                            <div class="review-stars">★★★★★</div>
-                                            <p class="review-text">"Nahid built our complete business website from scratch. Outstanding attention to detail, great communication throughout the project."</p>
-                                            <div class="review-author">
-                                                <span class="review-name">Sarah M.</span>
-                                                <span class="review-platform">UK · Direct</span>
-                                            </div>
-                                        </div>
-                                        <div class="review-card">
-                                            <div class="review-stars">★★★★★</div>
-                                            <p class="review-text">"Best developer I've worked with. Fixed complex bugs in our Shopify store within hours and added new features flawlessly."</p>
-                                            <div class="review-author">
-                                                <span class="review-name">Ali K.</span>
-                                                <span class="review-platform">UAE · Fiverr</span>
-                                            </div>
-                                        </div>
-                                        <div class="review-card">
-                                            <div class="review-stars">★★★★★</div>
-                                            <p class="review-text">"Incredibly talented full-stack developer. Delivered a complex web portal with API integrations perfectly. Will hire again without hesitation."</p>
-                                            <div class="review-author">
-                                                <span class="review-name">David L.</span>
-                                                <span class="review-platform">Canada · Fiverr</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="reviews-arrow reviews-arrow-next" aria-label="Next">&#8250;</button>
-                            </div>
-                            <div class="reviews-dots"></div>
-                        </div>
-                    </div>
-
-                    <!-- content -->
-                    <div id="Section2" class="resumeDiv" style="display:none;">
-                        <div class="row">
-                            <h3 class="gradient">
-                                Resume
-                            </h3>
-                            <hr>
-                            <div class="col-md-12">
-                                <ul class="timeline">
-                                    <li>
-                                        <a href="#" class="job_title">Backend Developer (Remote)</a>
-                                        <a href="#" class="pull-right"> <small>Mar, 2025 – Present</small> </a>
-                                        <p> <b>Organization:</b> Coalition Technologies (USA)</p>
-                                        <ul>
-                                            <li>Added new features to an existing Laravel-based CRM system.</li>
-                                            <li>Customized Shopify storefronts via Liquid file modifications.</li>
-                                            <li>Modifying custom Shopify & BigCommerce apps using Laravel.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="job_title">Web Developer (Remote)</a>
-                                        <a href="#" class="pull-right"> <small>Sep, 2024 – Feb, 2025</small> </a>
-                                        <p> <b>Organization:</b> TechHubPS (USA)</p>
-                                        <ul>
-                                            <li>Developed and maintained web applications.</li>
-                                            <li>Provided remote technical support and troubleshooting.</li>
-                                            <li>Collaborated with cross-functional teams on technical projects.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="job_title">Web Application Developer (Remote)</a>
-                                        <a href="#" class="pull-right"> <small>Mar, 2023 – Aug, 2024</small> </a>
-                                        <p> <b>Organization:</b> Vibetag Ltd (UK)</p>
-                                        <ul>
-                                            <li>Designed and developed complex web applications with creative, user-friendly interfaces.</li>
-                                            <li>Collaborated with teams to gather requirements and create responsive designs.</li>
-                                            <li>Developed APIs for mobile apps to optimize functionality and user experience.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="job_title">Senior Executive Programmer</a>
-                                        <a href="#" class="pull-right"> <small>Dec, 2021 – Dec, 2022</small> </a>
-                                        <p> <b>Organization:</b> Swiss Tex Ltd</p>
-                                        <ul>
-                                            <li>Enhanced ERP system functionalities and fixed bugs.</li>
-                                            <li>Provided timely client support to ensure satisfaction.</li>
-                                            <li>Developed web projects for Swisstex Group's sister concerns.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="job_title">Officer (MIS)</a>
-                                        <a href="#" class="pull-right"> <small>May, 2019 – Dec, 2021</small> </a>
-                                        <p> <b>Organization:</b> The City Bank Ltd</p>
-                                        <ul>
-                                            <li>Managed sensitive loan databases (SME-M, Commercial, Corporate).</li>
-                                            <li>Generated strategic reports to support management decisions.</li>
-                                            <li>Collaborated with IT to develop the Loan Proposal Tracking System (LPTS).</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h3 class="gradient">Other Experience</h3>
-                            <hr>
-                            <div class="numbered-list">
-                                <div class="numbered-card">
-                                    <div class="numbered-header">
-                                        <span class="numbered-idx">01</span>
-                                        <span class="numbered-title">Independent Web Consulting</span>
-                                    </div>
-                                    <p class="numbered-desc">139+ projects delivered globally with a 5★ average rating, helping businesses build scalable web solutions.</p>
-                                </div>
-                                <div class="numbered-card">
-                                    <div class="numbered-header">
-                                        <span class="numbered-idx">02</span>
-                                        <span class="numbered-title">Internship · Bangladesh Bank</span>
-                                    </div>
-                                    <p class="numbered-desc">3-month tenure at the Information Systems Development Department (ISDD), contributing to enterprise software initiatives.</p>
-                                </div>
-                                <div class="numbered-card">
-                                    <div class="numbered-header">
-                                        <span class="numbered-idx">03</span>
-                                        <span class="numbered-title">Competitive Programming · UVa Online Judge</span>
-                                    </div>
-                                    <p class="numbered-desc">Solved 25+ algorithmic challenges, sharpening problem-solving skills across data structures and logic design.</p>
-                                </div>
-                                <div class="numbered-card">
-                                    <div class="numbered-header">
-                                        <span class="numbered-idx">04</span>
-                                        <span class="numbered-title">Research · m-price Project</span>
-                                    </div>
-                                    <p class="numbered-desc">Collaborated with Dr. Nabeel Mohammed on a pricing intelligence research project involving data analysis and system design.</p>
-                                </div>
-                                <div class="numbered-card">
-                                    <div class="numbered-header">
-                                        <span class="numbered-idx">05</span>
-                                        <span class="numbered-title">Cognitive Research · Indian Statistical Institute</span>
-                                    </div>
-                                    <p class="numbered-desc">Long-term online research project with Dr. Garga Chatterjee exploring cognitive performance and behavioural patterns.</p>
-                                </div>
-                                <div class="numbered-card">
-                                    <div class="numbered-header">
-                                        <span class="numbered-idx">06</span>
-                                        <span class="numbered-title">Swarm Robotics · Multi-Robot System</span>
-                                    </div>
-                                    <p class="numbered-desc">Designed a Search &amp; Rescue simulation using NetLogo under Dr. Sifat Momen, applying swarm intelligence principles.</p>
-                                </div>
-                            </div>
-
-                            <h3 class="gradient cert-heading">Training &amp; Certification</h3>
-                            <hr>
-                            <div class="numbered-list">
-                                <div class="numbered-card">
-                                    <div class="numbered-header">
-                                        <span class="numbered-idx">01</span>
-                                        <span class="numbered-title">IELTS <span class="numbered-badge">Score: 7.5</span></span>
-                                    </div>
-                                    <p class="numbered-desc">International English Language Testing System — achieved an overall band score of 7.5, demonstrating advanced proficiency.</p>
-                                </div>
-                                <div class="numbered-card">
-                                    <div class="numbered-header">
-                                        <span class="numbered-idx">02</span>
-                                        <span class="numbered-title">Augmented Reality Course</span>
-                                    </div>
-                                    <p class="numbered-desc">Completed an immersive AR development course under BHTPA, exploring mixed reality applications and tooling.</p>
-                                </div>
-                                <div class="numbered-card">
-                                    <div class="numbered-header">
-                                        <span class="numbered-idx">03</span>
-                                        <span class="numbered-title">Web Development Course</span>
-                                    </div>
-                                    <p class="numbered-desc">Top-Up program under LICT covering modern web technologies, full-stack practices and industry workflows.</p>
-                                </div>
-                                <div class="numbered-card">
-                                    <div class="numbered-header">
-                                        <span class="numbered-idx">04</span>
-                                        <span class="numbered-title">Excel Professional Course</span>
-                                    </div>
-                                    <p class="numbered-desc">Advanced spreadsheet and data analysis certification from 10MinutesSchool covering formulas, pivots and dashboards.</p>
-                                </div>
-                                <div class="numbered-card">
-                                    <div class="numbered-header">
-                                        <span class="numbered-idx">05</span>
-                                        <span class="numbered-title">Oracle Certified Professional (OCP) 12c: DBA</span>
-                                    </div>
-                                    <p class="numbered-desc">First module of Oracle's professional DBA certification, covering database architecture, administration and SQL tuning.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="Section3" class="workDiv" style="display:none;">
-                        <h3 class="gradient">
-                            Skills
-                        </h3>
-                        <hr>
-                        <div class="skill-tags-section">
-                            <div class="skill-tag-group">
-                                <span class="skill-tag-label">Programming Languages</span>
-                                <div class="skill-tags">
-                                    <span>C</span><span>C++</span><span>PHP</span><span>JavaScript</span>
-                                </div>
-                            </div>
-                            <div class="skill-tag-group">
-                                <span class="skill-tag-label">Database</span>
-                                <div class="skill-tags">
-                                    <span>MySQL</span><span>SQLite</span><span>Oracle (Fundamentals)</span>
-                                </div>
-                            </div>
-                            <div class="skill-tag-group">
-                                <span class="skill-tag-label">Web Design</span>
-                                <div class="skill-tags">
-                                    <span>HTML</span><span>CSS</span><span>WordPress</span><span>Wix</span><span>Shopify</span>
-                                </div>
-                            </div>
-                            <div class="skill-tag-group">
-                                <span class="skill-tag-label">Frameworks</span>
-                                <div class="skill-tags">
-                                    <span>Bootstrap</span><span>TailwindCSS</span><span>MaterializeCSS</span><span>Laravel</span><span>Vue.js</span><span>React.js</span>
-                                </div>
-                            </div>
-                            <div class="skill-tag-group">
-                                <span class="skill-tag-label">Microsoft Office</span>
-                                <div class="skill-tags">
-                                    <span>PowerPoint</span><span>Word</span><span>Excel</span><span>Access</span>
-                                </div>
-                            </div>
-                            <div class="skill-tag-group">
-                                <span class="skill-tag-label">Others</span>
-                                <div class="skill-tags">
-                                    <span>Adobe Photoshop</span><span>Adobe Illustrator</span>
-                                </div>
-                            </div>
-                            <div class="skill-tag-group">
-                                <span class="skill-tag-label">Servers</span>
-                                <div class="skill-tags">
-                                    <span>Apache</span><span>AWS</span><span>Cloudways</span>
-                                </div>
-                            </div>
-                        </div>
-                        <h3 class="gradient">
-                            Portfolio
-                        </h3>
-                        <hr>
-                        <ul class="pf-filters">
-                            <li class="active" data-bs-filter="*">All</li>
-                            <li data-bs-filter=".ecommerce">E-commerce</li>
-                            <li data-bs-filter=".business">Business</li>
-                            <li data-bs-filter=".others">Others</li>
-                        </ul>
-
-                        <div class="projects pf-grid">
-                            <div class="item ecommerce">
-                                <div class="pf-card">
-                                    <div class="pf-img-wrap">
-                                        <img src="images/portfolio/brandshop-gig.jpg" alt="NHT Brandshop" class="pf-img">
-                                        <div class="pf-overlay">
-                                            <span class="pf-cat">E-commerce</span>
-                                            <h4 class="pf-overlay-title">NHT Brandshop</h4>
-                                            <p class="pf-overlay-desc">E-commerce Website Design &amp; Development</p>
-                                            <div class="pf-actions">
-                                                <a href="#!" class="pf-btn"><i class="bi bi-eye"></i> Preview</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pf-footer">
-                                        <span class="pf-title">NHT Brandshop</span>
-                                        <div class="pf-tags"><span>Laravel</span><span>MySQL</span><span>JS</span></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item ecommerce">
-                                <div class="pf-card">
-                                    <div class="pf-img-wrap">
-                                        <img src="images/portfolio/shilpabangla-gig.jpg" alt="Shilpabangla" class="pf-img">
-                                        <div class="pf-overlay">
-                                            <span class="pf-cat">E-commerce</span>
-                                            <h4 class="pf-overlay-title">Shilpabangla</h4>
-                                            <p class="pf-overlay-desc">E-commerce Website Design &amp; Development</p>
-                                            <div class="pf-actions">
-                                                <a href="#!" class="pf-btn"><i class="bi bi-eye"></i> Preview</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pf-footer">
-                                        <span class="pf-title">Shilpabangla</span>
-                                        <div class="pf-tags"><span>Laravel</span><span>MySQL</span><span>CSS</span></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item business">
-                                <div class="pf-card">
-                                    <div class="pf-img-wrap">
-                                        <img src="images/portfolio/Ivypro.jpg" alt="Eduzenship" class="pf-img">
-                                        <div class="pf-overlay">
-                                            <span class="pf-cat">Business</span>
-                                            <h4 class="pf-overlay-title">Eduzenship</h4>
-                                            <p class="pf-overlay-desc">Student Consultancy Firm Website</p>
-                                            <div class="pf-actions">
-                                                <a href="https://eduzenship.com/" target="_blank" class="pf-btn"><i class="bi bi-box-arrow-up-right"></i> Live</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pf-footer">
-                                        <span class="pf-title">Eduzenship</span>
-                                        <div class="pf-tags"><span>Laravel</span><span>MySQL</span><span>JS</span></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item business">
-                                <div class="pf-card">
-                                    <div class="pf-img-wrap">
-                                        <img src="images/portfolio/set-gig.jpg" alt="SET" class="pf-img">
-                                        <div class="pf-overlay">
-                                            <span class="pf-cat">Business</span>
-                                            <h4 class="pf-overlay-title">SET</h4>
-                                            <p class="pf-overlay-desc">Premium Laundry Service Website</p>
-                                            <div class="pf-actions">
-                                                <a href="http://fiverr.eduzenship.com/" target="_blank" class="pf-btn"><i class="bi bi-box-arrow-up-right"></i> Live</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pf-footer">
-                                        <span class="pf-title">SET</span>
-                                        <div class="pf-tags"><span>Laravel</span><span>PHP</span><span>CSS</span></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item business">
-                                <div class="pf-card">
-                                    <div class="pf-img-wrap">
-                                        <img src="images/portfolio/main_affordable-gig.jpg" alt="Alt Florida" class="pf-img">
-                                        <div class="pf-overlay">
-                                            <span class="pf-cat">Business</span>
-                                            <h4 class="pf-overlay-title">Alt Florida</h4>
-                                            <p class="pf-overlay-desc">Rent-a-car Business Website</p>
-                                            <div class="pf-actions">
-                                                <a href="#!" class="pf-btn"><i class="bi bi-eye"></i> Preview</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pf-footer">
-                                        <span class="pf-title">Alt Florida</span>
-                                        <div class="pf-tags"><span>Laravel</span><span>MySQL</span><span>JS</span></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item others">
-                                <div class="pf-card">
-                                    <div class="pf-img-wrap">
-                                        <img src="images/portfolio/tad.jpg" alt="TAD" class="pf-img">
-                                        <div class="pf-overlay">
-                                            <span class="pf-cat">Others</span>
-                                            <h4 class="pf-overlay-title">TAD</h4>
-                                            <p class="pf-overlay-desc">Client-Coach Exam Portal</p>
-                                            <div class="pf-actions">
-                                                <a href="http://freelancing.eduzenship.com/" target="_blank" class="pf-btn"><i class="bi bi-box-arrow-up-right"></i> Live</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pf-footer">
-                                        <span class="pf-title">TAD</span>
-                                        <div class="pf-tags"><span>Laravel</span><span>PHP</span><span>MySQL</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div id="Section5" class="educationDiv" style="display:none;">
-                        <h3 class="gradient">Education</h3>
-                        <hr>
-
-                        <div class="edu-cards">
-                            <div class="edu-card">
-                                <div class="edu-icon"><i class="bi bi-award"></i></div>
-                                <div class="edu-body">
-                                    <span class="edu-degree">M.Sc. in Computer Science &amp; Engineering</span>
-                                    <span class="edu-inst">Jahangirnagar University</span>
-                                    <div class="edu-meta">
-                                        <span class="edu-year"><i class="bi bi-calendar3"></i> Passing Year: 2021</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="edu-card">
-                                <div class="edu-icon"><i class="bi bi-award"></i></div>
-                                <div class="edu-body">
-                                    <span class="edu-degree">B.Sc. in Computer Science &amp; Engineering</span>
-                                    <span class="edu-inst">Jahangirnagar University</span>
-                                    <div class="edu-meta">
-                                        <span class="edu-year"><i class="bi bi-calendar3"></i> Passing Year: 2018</span>
-                                    </div>
-                                    <span class="edu-group">Minor: Electronics &amp; Telecommunication Engineering</span>
-                                </div>
-                            </div>
-                            <div class="edu-card">
-                                <div class="edu-icon"><i class="bi bi-building"></i></div>
-                                <div class="edu-body">
-                                    <span class="edu-degree">HSC — Higher Secondary Certificate</span>
-                                    <span class="edu-inst">Northern College Bangladesh</span>
-                                    <div class="edu-meta">
-                                        <span class="edu-year"><i class="bi bi-calendar3"></i> Passing Year: 2013</span>
-                                    </div>
-                                    <span class="edu-group">Group: Science</span>
-                                </div>
-                            </div>
-                            <div class="edu-card">
-                                <div class="edu-icon"><i class="bi bi-book"></i></div>
-                                <div class="edu-body">
-                                    <span class="edu-degree">SSC — Secondary School Certificate</span>
-                                    <span class="edu-inst">St. Joseph's High School</span>
-                                    <div class="edu-meta">
-                                        <span class="edu-year"><i class="bi bi-calendar3"></i> Passing Year: 2011</span>
-                                    </div>
-                                    <span class="edu-group">Group: Science</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="Section4" class="contactDiv" style="display:none;">
-                        <h3 class="gradient">Contact</h3>
-                        <hr>
-                        <p class="contact-intro">Feel free to reach out for collaborations, remote opportunities, or projects.</p>
-
-                        <div class="contact-grid">
-                            <div class="contact-item">
-                                <i class="bi bi-envelope-fill"></i>
-                                <div>
-                                    <h6>Email</h6>
-                                    <a href="mailto:nahidhtamim@gmail.com">nahidhtamim@gmail.com</a>
-                                    <a href="mailto:nahid@nhtamim.top" class="contact-email-2">nahid@nhtamim.top</a>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="bi bi-telephone-fill"></i>
-                                <div>
-                                    <h6>Phone</h6>
-                                    <a href="tel:+8801687390766">+880-1687390766</a>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="bi bi-whatsapp"></i>
-                                <div>
-                                    <h6>WhatsApp</h6>
-                                    <a href="https://wa.me/8801687390766" target="_blank">+880-1687390766</a>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="bi bi-geo-alt-fill"></i>
-                                <div>
-                                    <h6>Location</h6>
-                                    <p>Dhaka, Bangladesh</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="contact-socials">
-                            <a href="https://github.com/nahidhtamim" target="_blank" class="contact-social-btn" title="GitHub">
-                                <i class="bi bi-github"></i>
-                                <span>GitHub</span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/nahidhtamim" target="_blank" class="contact-social-btn" title="LinkedIn">
-                                <i class="bi bi-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                            <a href="https://www.nhtamim.top" target="_blank" class="contact-social-btn" title="Website">
-                                <i class="bi bi-globe"></i>
-                                <span>Website</span>
-                            </a>
-                        </div>
-
-                        <h6 class="contact-form-title">Send a Message</h6>
-                        <form class="contact-form" action="https://formspree.io/f/nahidhtamim@gmail.com" method="POST">
-                            <div class="cf-row">
-                                <div class="cf-group">
-                                    <label for="cf-name">Name</label>
-                                    <input type="text" id="cf-name" name="name" placeholder="Your name" required>
-                                </div>
-                                <div class="cf-group">
-                                    <label for="cf-email">Email</label>
-                                    <input type="email" id="cf-email" name="email" placeholder="your@email.com" required>
-                                </div>
-                            </div>
-                            <div class="cf-group">
-                                <label for="cf-subject">Subject</label>
-                                <input type="text" id="cf-subject" name="subject" placeholder="What's this about?">
-                            </div>
-                            <div class="cf-group">
-                                <label for="cf-message">Message</label>
-                                <textarea id="cf-message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
-                            </div>
-                            <button type="submit" class="cf-submit">
-                                <i class="bi bi-send"></i> Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <!--==============================
-                    Details Section Ends
-                !=================================-->
-
+        <section class="book-shell">
+            <div class="book-spine">
+                <span>NHT</span>
+                <small>Portfolio Chronicle</small>
             </div>
-        </div>
-    </section>
 
+            <section class="book-cover">
+                <div class="cover-inner">
+                    <p class="cover-kicker">Volume I</p>
+                    <div class="cover-portrait-ring">
+                        <img src="images/profile.jpeg" alt="Portrait of Md. Nahid Hasan Tamim" class="cover-portrait">
+                    </div>
+                    <p class="cover-label">Md. Nahid Hasan Tamim</p>
+                    <h1>Web systems crafted like enduring chapters.</h1>
+                    <p class="cover-summary">Backend-focused full-stack developer building scalable products for banking, fintech, and global teams.</p>
 
+                    <div class="cover-meta">
+                        <div>
+                            <strong>6+</strong>
+                            <span>Years</span>
+                        </div>
+                        <div>
+                            <strong>139+</strong>
+                            <span>Projects</span>
+                        </div>
+                        <div>
+                            <strong>5 Star</strong>
+                            <span>Rating</span>
+                        </div>
+                    </div>
 
+                    <div class="cover-socials">
+                        <a href="https://github.com/nahidhtamim" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                        <a href="mailto:nahidhtamim@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/nahidhtamim" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
 
-    <!--==============================
-    Scripts
-    !=================================-->
+                    <div class="cover-actions">
+                        <a class="cover-btn primary" href="Resume - MD. Nahid Hasan Tamim.pdf" download>Download CV</a>
+                        <button class="cover-btn secondary" type="button" data-target="Section4">Open Contact Page</button>
+                    </div>
+                </div>
+            </section>
 
-    <script src="https://kit.fontawesome.com/177aa6247e.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <section class="book-pages">
+                <div class="page-stack-shadow"></div>
+                <div class="page-flip-sheet" aria-hidden="true"></div>
+
+                <div class="book-page-frame">
+                    <article id="Section1" class="page-sheet active-page" data-page-number="1">
+                        <header class="page-head">
+                            <div>
+                                <p class="page-eyebrow">Welcome to my portfolio</p>
+                                <h2>Hi, I'm Nahid.</h2>
+                            </div>
+                            <span class="folio">01</span>
+                        </header>
+
+                        <div class="page-body">
+                            <section class="chapter-block intro-hero">
+                                <p class="lead-copy">I build <span id="profession">backend systems</span> with clean architecture, thoughtful UI collaboration, and production-ready execution.</p>
+                                <p class="intro-note">Currently working as a Backend Developer at Coalition Technologies (USA), with experience spanning Laravel, Shopify, scalable APIs, and delivery for international clients.</p>
+                            </section>
+
+                            <section class="chapter-block">
+                                <div class="section-title-row">
+                                    <h3>About Me</h3>
+                                    <span class="ornament"></span>
+                                </div>
+                                <p>A full-stack web developer with <strong>6+ years</strong> of experience across banking, fintech, and international tech firms in the USA and UK. I focus on Laravel, Shopify, modern frontend integrations, and scalable web applications that stay maintainable after launch.</p>
+                            </section>
+
+                            <section class="chapter-block stat-spread">
+                                <article class="featured-stat">
+                                    <span class="featured-num">6+</span>
+                                    <div>
+                                        <span class="mini-label">Years of</span>
+                                        <strong>Experience</strong>
+                                    </div>
+                                    <p>Full-stack development across banking, fintech, e-commerce, and distributed product teams.</p>
+                                </article>
+                                <div class="stat-grid">
+                                    <article class="stat-card">
+                                        <strong>139+</strong>
+                                        <span>Projects done</span>
+                                    </article>
+                                    <article class="stat-card">
+                                        <strong>101+</strong>
+                                        <span>Client reviews</span>
+                                    </article>
+                                    <article class="stat-card">
+                                        <strong>75+</strong>
+                                        <span>Happy clients</span>
+                                    </article>
+                                    <article class="stat-card">
+                                        <strong>5 Star</strong>
+                                        <span>Average rating</span>
+                                    </article>
+                                </div>
+                            </section>
+
+                            <section class="chapter-block">
+                                <div class="section-title-row">
+                                    <h3>What I Do</h3>
+                                    <span class="ornament"></span>
+                                </div>
+                                <div class="service-grid">
+                                    <article class="service-card">
+                                        <i class="bi bi-braces-asterisk"></i>
+                                        <h4>Web Development</h4>
+                                        <p>Robust apps from backend logic to polished interfaces.</p>
+                                    </article>
+                                    <article class="service-card">
+                                        <i class="bi bi-window-stack"></i>
+                                        <h4>Web Design</h4>
+                                        <p>Clean modern experiences shaped for clarity and impact.</p>
+                                    </article>
+                                    <article class="service-card">
+                                        <i class="bi bi-kanban"></i>
+                                        <h4>Project Delivery</h4>
+                                        <p>Clear communication, realistic execution, dependable results.</p>
+                                    </article>
+                                    <article class="service-card">
+                                        <i class="bi bi-lightbulb"></i>
+                                        <h4>Consultancy</h4>
+                                        <p>Technical guidance that turns product ideas into solid builds.</p>
+                                    </article>
+                                </div>
+                            </section>
+                        </div>
+                    </article>
+
+                    <article id="Section2" class="page-sheet" data-page-number="2">
+                        <header class="page-head">
+                            <div>
+                                <p class="page-eyebrow">Chapter Two</p>
+                                <h2>Experience & Resume</h2>
+                            </div>
+                            <span class="folio">02</span>
+                        </header>
+
+                        <div class="page-body">
+                            <section class="chapter-block">
+                                <div class="section-title-row">
+                                    <h3>Professional Timeline</h3>
+                                    <span class="ornament"></span>
+                                </div>
+                                <div class="timeline-list">
+                                    <article class="timeline-entry">
+                                        <div class="timeline-meta"><span>Mar 2025 - Present</span><small>Coalition Technologies, USA</small></div>
+                                        <div class="timeline-copy">
+                                            <h4>Backend Developer (Remote)</h4>
+                                            <p>Building Laravel CRM features, customizing Shopify storefronts, and improving custom apps for commerce workflows.</p>
+                                        </div>
+                                    </article>
+                                    <article class="timeline-entry">
+                                        <div class="timeline-meta"><span>Sep 2024 - Feb 2025</span><small>TechHubPS, USA</small></div>
+                                        <div class="timeline-copy">
+                                            <h4>Web Developer (Remote)</h4>
+                                            <p>Developed and maintained web applications while supporting remote troubleshooting and cross-team collaboration.</p>
+                                        </div>
+                                    </article>
+                                    <article class="timeline-entry">
+                                        <div class="timeline-meta"><span>Mar 2023 - Aug 2024</span><small>Vibetag Ltd, UK</small></div>
+                                        <div class="timeline-copy">
+                                            <h4>Web Application Developer (Remote)</h4>
+                                            <p>Designed complex web apps, collaborated on requirements, and built APIs supporting mobile product experiences.</p>
+                                        </div>
+                                    </article>
+                                    <article class="timeline-entry">
+                                        <div class="timeline-meta"><span>Dec 2021 - Dec 2022</span><small>Swiss Tex Ltd</small></div>
+                                        <div class="timeline-copy">
+                                            <h4>Senior Executive Programmer</h4>
+                                            <p>Enhanced ERP workflows, fixed product issues, and developed digital products for sister concerns within the group.</p>
+                                        </div>
+                                    </article>
+                                    <article class="timeline-entry">
+                                        <div class="timeline-meta"><span>May 2019 - Dec 2021</span><small>The City Bank Ltd</small></div>
+                                        <div class="timeline-copy">
+                                            <h4>Officer (MIS)</h4>
+                                            <p>Managed sensitive loan data, generated strategic reporting, and supported the Loan Proposal Tracking System.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </section>
+
+                            <section class="chapter-block">
+                                <div class="section-title-row">
+                                    <h3>Other Experience</h3>
+                                    <span class="ornament"></span>
+                                </div>
+                                <div class="numbered-list">
+                                    <article class="numbered-card"><span>01</span><p>Independent web consulting with 139+ projects delivered globally and a 5-star average rating.</p></article>
+                                    <article class="numbered-card"><span>02</span><p>Internship at Bangladesh Bank in the Information Systems Development Department.</p></article>
+                                    <article class="numbered-card"><span>03</span><p>Competitive programming practice on UVa Online Judge with 25+ solved challenges.</p></article>
+                                    <article class="numbered-card"><span>04</span><p>Research collaboration on the m-price project involving data analysis and system design.</p></article>
+                                </div>
+                            </section>
+
+                            <section class="chapter-block">
+                                <div class="section-title-row">
+                                    <h3>Training & Certification</h3>
+                                    <span class="ornament"></span>
+                                </div>
+                                <div class="badge-list">
+                                    <span>IELTS 7.5</span>
+                                    <span>Augmented Reality Course</span>
+                                    <span>Web Development Course</span>
+                                    <span>Excel Professional Course</span>
+                                    <span>Oracle Certified Professional 12c: DBA</span>
+                                </div>
+                            </section>
+                        </div>
+                    </article>
+
+                    <article id="Section5" class="page-sheet" data-page-number="3">
+                        <header class="page-head">
+                            <div>
+                                <p class="page-eyebrow">Chapter Three</p>
+                                <h2>Education</h2>
+                            </div>
+                            <span class="folio">03</span>
+                        </header>
+
+                        <div class="page-body">
+                            <section class="chapter-block">
+                                <div class="section-title-row">
+                                    <h3>Academic Chapters</h3>
+                                    <span class="ornament"></span>
+                                </div>
+                                <div class="edu-cards">
+                                    <article class="edu-card">
+                                        <i class="bi bi-mortarboard"></i>
+                                        <div>
+                                            <h4>M.Sc. in Computer Science & Engineering</h4>
+                                            <p>Jahangirnagar University</p>
+                                            <span>Passing Year: 2021</span>
+                                        </div>
+                                    </article>
+                                    <article class="edu-card">
+                                        <i class="bi bi-award"></i>
+                                        <div>
+                                            <h4>B.Sc. in Computer Science & Engineering</h4>
+                                            <p>Jahangirnagar University</p>
+                                            <span>Minor: Electronics & Telecommunication Engineering</span>
+                                        </div>
+                                    </article>
+                                    <article class="edu-card">
+                                        <i class="bi bi-building"></i>
+                                        <div>
+                                            <h4>Higher Secondary Certificate</h4>
+                                            <p>Northern College Bangladesh</p>
+                                            <span>Passing Year: 2013</span>
+                                        </div>
+                                    </article>
+                                    <article class="edu-card">
+                                        <i class="bi bi-book"></i>
+                                        <div>
+                                            <h4>Secondary School Certificate</h4>
+                                            <p>St. Joseph's High School</p>
+                                            <span>Passing Year: 2011</span>
+                                        </div>
+                                    </article>
+                                </div>
+                            </section>
+
+                            <section class="chapter-block quote-block">
+                                <p>"Strong foundations make the later chapters easier to write."</p>
+                            </section>
+                        </div>
+                    </article>
+
+                    <article id="Section3" class="page-sheet" data-page-number="4">
+                        <header class="page-head">
+                            <div>
+                                <p class="page-eyebrow">Chapter Four</p>
+                                <h2>Skills & Portfolio</h2>
+                            </div>
+                            <span class="folio">04</span>
+                        </header>
+
+                        <div class="page-body">
+                            <section class="chapter-block">
+                                <div class="section-title-row">
+                                    <h3>Skill Index</h3>
+                                    <span class="ornament"></span>
+                                </div>
+                                <div class="skill-tag-groups">
+                                    <div class="skill-tag-group"><strong>Languages</strong><div class="skill-tags"><span>C</span><span>C++</span><span>PHP</span><span>JavaScript</span></div></div>
+                                    <div class="skill-tag-group"><strong>Database</strong><div class="skill-tags"><span>MySQL</span><span>SQLite</span><span>Oracle</span></div></div>
+                                    <div class="skill-tag-group"><strong>Design</strong><div class="skill-tags"><span>HTML</span><span>CSS</span><span>WordPress</span><span>Shopify</span></div></div>
+                                    <div class="skill-tag-group"><strong>Frameworks</strong><div class="skill-tags"><span>Laravel</span><span>Vue.js</span><span>React.js</span><span>TailwindCSS</span><span>Bootstrap</span></div></div>
+                                    <div class="skill-tag-group"><strong>Servers</strong><div class="skill-tags"><span>Apache</span><span>AWS</span><span>Cloudways</span></div></div>
+                                </div>
+                            </section>
+
+                            <section class="chapter-block">
+                                <div class="section-title-row">
+                                    <h3>Selected Projects</h3>
+                                    <span class="ornament"></span>
+                                </div>
+                                <div class="filter-row">
+                                    <button class="filter-btn active" data-filter="all" type="button">All</button>
+                                    <button class="filter-btn" data-filter="ecommerce" type="button">E-commerce</button>
+                                    <button class="filter-btn" data-filter="business" type="button">Business</button>
+                                    <button class="filter-btn" data-filter="others" type="button">Others</button>
+                                </div>
+
+                                <div class="project-grid">
+                                    <article class="project-card" data-category="ecommerce">
+                                        <img src="images/portfolio/brandshop-gig.jpg" alt="NHT Brandshop">
+                                        <div class="project-copy">
+                                            <span>E-commerce</span>
+                                            <h4>NHT Brandshop</h4>
+                                            <p>E-commerce website design and development.</p>
+                                        </div>
+                                    </article>
+                                    <article class="project-card" data-category="ecommerce">
+                                        <img src="images/portfolio/shilpabangla-gig.jpg" alt="Shilpabangla">
+                                        <div class="project-copy">
+                                            <span>E-commerce</span>
+                                            <h4>Shilpabangla</h4>
+                                            <p>Storefront crafted with Laravel, MySQL, and custom styling.</p>
+                                        </div>
+                                    </article>
+                                    <article class="project-card" data-category="business">
+                                        <img src="images/portfolio/Ivypro.jpg" alt="Eduzenship">
+                                        <div class="project-copy">
+                                            <span>Business</span>
+                                            <h4>Eduzenship</h4>
+                                            <p>Student consultancy website with a polished business identity.</p>
+                                        </div>
+                                    </article>
+                                    <article class="project-card" data-category="business">
+                                        <img src="images/portfolio/set-gig.jpg" alt="SET">
+                                        <div class="project-copy">
+                                            <span>Business</span>
+                                            <h4>SET</h4>
+                                            <p>Premium laundry service website focused on presentation and trust.</p>
+                                        </div>
+                                    </article>
+                                    <article class="project-card" data-category="business">
+                                        <img src="images/portfolio/main_affordable-gig.jpg" alt="Alt Florida">
+                                        <div class="project-copy">
+                                            <span>Business</span>
+                                            <h4>Alt Florida</h4>
+                                            <p>Rent-a-car business website with conversion-focused structure.</p>
+                                        </div>
+                                    </article>
+                                    <article class="project-card" data-category="others">
+                                        <img src="images/portfolio/tad.jpg" alt="TAD">
+                                        <div class="project-copy">
+                                            <span>Others</span>
+                                            <h4>TAD</h4>
+                                            <p>Client-coach exam portal built for structured user journeys.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </section>
+                        </div>
+                    </article>
+
+                    <article id="Section4" class="page-sheet" data-page-number="5">
+                        <header class="page-head">
+                            <div>
+                                <p class="page-eyebrow">Final Chapter</p>
+                                <h2>Let's Build Something Together</h2>
+                            </div>
+                            <span class="folio">05</span>
+                        </header>
+
+                        <div class="page-body">
+                            <section class="chapter-block">
+                                <div class="section-title-row">
+                                    <h3>Reach Out</h3>
+                                    <span class="ornament"></span>
+                                </div>
+                                <p class="contact-intro">Feel free to reach out for collaborations, remote opportunities, long-term product work, or project partnerships.</p>
+                                <div class="contact-grid">
+                                    <article class="contact-card">
+                                        <i class="bi bi-envelope"></i>
+                                        <div>
+                                            <h4>Email</h4>
+                                            <a href="mailto:nahidhtamim@gmail.com">nahidhtamim@gmail.com</a>
+                                            <a href="mailto:nahid@nhtamim.top">nahid@nhtamim.top</a>
+                                        </div>
+                                    </article>
+                                    <article class="contact-card">
+                                        <i class="bi bi-telephone"></i>
+                                        <div>
+                                            <h4>Phone</h4>
+                                            <a href="tel:+8801687390766">+880-1687390766</a>
+                                        </div>
+                                    </article>
+                                    <article class="contact-card">
+                                        <i class="bi bi-whatsapp"></i>
+                                        <div>
+                                            <h4>WhatsApp</h4>
+                                            <a href="https://wa.me/8801687390766" target="_blank" rel="noreferrer">Chat directly</a>
+                                        </div>
+                                    </article>
+                                    <article class="contact-card">
+                                        <i class="bi bi-geo-alt"></i>
+                                        <div>
+                                            <h4>Location</h4>
+                                            <p>Dhaka, Bangladesh</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </section>
+
+                            <section class="chapter-block">
+                                <div class="section-title-row">
+                                    <h3>Send a Message</h3>
+                                    <span class="ornament"></span>
+                                </div>
+                                <form class="contact-form" action="https://formspree.io/f/nahidhtamim@gmail.com" method="POST">
+                                    <div class="form-row">
+                                        <label>
+                                            <span>Name</span>
+                                            <input type="text" name="name" placeholder="Your name" required>
+                                        </label>
+                                        <label>
+                                            <span>Email</span>
+                                            <input type="email" name="email" placeholder="you@example.com" required>
+                                        </label>
+                                    </div>
+                                    <label>
+                                        <span>Subject</span>
+                                        <input type="text" name="subject" placeholder="What's this about?">
+                                    </label>
+                                    <label>
+                                        <span>Message</span>
+                                        <textarea name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                                    </label>
+                                    <button type="submit" class="submit-btn">Send Message</button>
+                                </form>
+                            </section>
+                        </div>
+                    </article>
+                </div>
+
+                <footer class="page-nav">
+                    <button type="button" id="prev-page" class="page-nav-btn">Previous Page</button>
+                    <p class="page-hint">Turn the page to continue the story.</p>
+                    <button type="button" id="next-page" class="page-nav-btn">Next Page</button>
+                </footer>
+            </section>
+        </section>
+    </main>
+
     <script src="js/script.js"></script>
-
-    <!--==============================
-    Scripts
-    !=================================-->
-
 </body>
 
 </html>
