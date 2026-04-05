@@ -7,9 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NHT Portfolio</title>
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- JavaScripts -->
@@ -19,21 +22,29 @@
 </head>
 
 <body>
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+        <div class="orb orb-5"></div>
+        <div class="orb orb-6"></div>
+    </div>
     <section class="main-div">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
 
                 <!--==============================
                     SideNav Starts
                 !=================================-->
 
-                <div class="col-sm-auto col-lg-auto sticky-top sidenav">
-                    <div class="d-flex flex-sm-column flex-row flex-nowrap align-items-center sticky-top mb-4 sidenav-btn">
+                <div class="col-sm-auto col-lg-auto sidenav">
+                    <div class="d-flex flex-sm-column flex-row flex-nowrap align-items-center sidenav-btn">
                         <div class="sidenav-logo">
-                            <img src="images/nht-logo.svg" alt="NHT" width="52" height="52" />
+                            <span class="logo-text">NHT</span>
                         </div>
                         <div class="sidenav-divider"></div>
-                        <ul class="nav nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center w-100 align-items-center sidenav-nav">
+                        <ul class="nav nav-flush flex-sm-column flex-row flex-nowrap mx-auto text-center w-100 align-items-center sidenav-nav">
                             <li class="nav-item">
                                 <a href="#Section1" class="nav-link sidenav-link about active-nav" id="about" onclick="show('Section1');">
                                     <i class="bi bi-person-circle"></i>
@@ -68,7 +79,7 @@
                         <div class="sidenav-divider"></div>
                         <button class="theme-toggle" id="theme-toggle" title="Toggle light/dark mode">
                             <i class="bi bi-sun-fill" id="theme-icon"></i>
-                            <span>Light</span>
+                            <span>Theme</span>
                         </button>
                     </div>
                 </div>
@@ -78,14 +89,20 @@
                 !=================================-->
 
                 <!--==============================
-                    Info Card Starts
+                    Book Layout Starts
                 !=================================-->
 
-                <div class="col-sm col-lg-5 pb-2">
+                <div class="book">
+
+                <!--==============================
+                    Info Card Starts (Left Page)
+                !=================================-->
+
+                <div class="col-sm col-lg-5 pb-2 book-left">
                     <div class="d-flex ">
                         <div class="card info-card">
                             <div class="background-block">
-                                <img src="images/cover.jpg" alt="cover" class="background" />
+                                <img src="images/cover.png" alt="cover" class="background" />
                             </div>
                             <div class="profile-thumb-block">
                                 <img src="images/profile.jpeg" alt="profile-image" class="profile" />
@@ -113,18 +130,20 @@
                 </div>
 
                 <!--==============================
-                    Info Card Ends
+                    Info Card Ends (Left Page)
                 !=================================-->
+
+                <div class="book-spine"></div>
 
                 <!--==============================
-                    Details Section Starts
+                    Details Section Starts (Right Page)
                 !=================================-->
 
-                <div class="col-sm details col-lg-6">
+                <div class="col-sm details col-lg-6 book-right">
                     <div id="Section1" class="aboutDiv" style="display:block;">
                         <h3 class="gradient">About Me</h3>
-                        <hr>
-                        <p>A full-stack web developer with <strong>6+ years</strong> of experience across banking, fintech, and international tech firms in the USA and UK. Currently Backend Developer at <strong>Coalition Technologies (USA)</strong>, specializing in Laravel, Shopify, and scalable web applications.</p>
+
+                        <p>Software Engineer with <strong>6+ years</strong> of experience building scalable web platforms, CRM systems, and enterprise applications. Skilled in <strong>PHP (Laravel), JavaScript</strong>, and API-driven architectures, I specialize in translating business requirements into efficient technical solutions. Passionate about collaborating with cross-functional teams to deliver user-focused products and scalable digital solutions.</p>
                         <!-- <p>Freelance Level 2 seller on Fiverr with a 5-star track record, blending technical depth with strong communication to deliver results that exceed expectations.</p> -->
 
                         <div class="about-stats">
@@ -157,7 +176,7 @@
                         </div>
 
                         <div class="expertise-section">
-                            <h6 class="expertise-title">What I Do</h6>
+                            <h3 class="gradient">What I Do</h3>
                             <div class="service-grid">
                                 <div class="service-card">
                                     <i class="bi bi-palette2 service-icon"></i>
@@ -183,41 +202,129 @@
                         </div>
 
                         <div class="reviews-section">
-                            <h6 class="reviews-title">Client Reviews</h6>
+                            <h3 class="gradient">Client Reviews</h3>
                             <div class="reviews-slider-wrap">
                                 <button class="reviews-arrow reviews-arrow-prev" aria-label="Previous">&#8249;</button>
                                 <div class="reviews-track-outer">
                                     <div class="reviews-track">
                                         <div class="review-card">
                                             <div class="review-stars">★★★★★</div>
-                                            <p class="review-text">"Exceptional work on our Laravel e-commerce platform. Delivered ahead of schedule with clean, well-documented code. Highly professional."</p>
+                                            <p class="review-text">"Tamim is awesome! He's good at programming, he's a strong professional, and he's very knowledgeable. He went above and beyond to make the web app the way that I want it to be. Very responsive and quick to answer any questions. I highly recommend him for future projects!!"</p>
                                             <div class="review-author">
-                                                <span class="review-name">James R.</span>
-                                                <span class="review-platform">USA · Fiverr</span>
+                                                <span class="review-name">cikang71</span>
+                                                <span class="review-platform">Fiverr</span>
                                             </div>
                                         </div>
                                         <div class="review-card">
                                             <div class="review-stars">★★★★★</div>
-                                            <p class="review-text">"Nahid built our complete business website from scratch. Outstanding attention to detail, great communication throughout the project."</p>
+                                            <p class="review-text">"Simply amazing from start to finish. If you are looking for a full stack dev that goes the extra mile, look no further. Thank you for fixing my site and making the design improvements. I am blown away by your knowledge. 10 out of 10!"</p>
                                             <div class="review-author">
-                                                <span class="review-name">Sarah M.</span>
-                                                <span class="review-platform">UK · Direct</span>
-                                            </div>
-                                        </div>
-                                        <div class="review-card">
-                                            <div class="review-stars">★★★★★</div>
-                                            <p class="review-text">"Best developer I've worked with. Fixed complex bugs in our Shopify store within hours and added new features flawlessly."</p>
-                                            <div class="review-author">
-                                                <span class="review-name">Ali K.</span>
-                                                <span class="review-platform">UAE · Fiverr</span>
-                                            </div>
-                                        </div>
-                                        <div class="review-card">
-                                            <div class="review-stars">★★★★★</div>
-                                            <p class="review-text">"Incredibly talented full-stack developer. Delivered a complex web portal with API integrations perfectly. Will hire again without hesitation."</p>
-                                            <div class="review-author">
-                                                <span class="review-name">David L.</span>
+                                                <span class="review-name">id2024ii</span>
                                                 <span class="review-platform">Canada · Fiverr</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"Working with Tamim was an absolute pleasure. He delivered high-quality code on time and exceeded expectations. Highly recommended for any development project!"</p>
+                                            <div class="review-author">
+                                                <span class="review-name">toukirahmed836</span>
+                                                <span class="review-platform">UK · Fiverr</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"It was my first experience taking any services through Fiverr and here I met brother Tamim. Tamim and his team made it crystal clear. Highly professional and cooperative developer. Highly recommended!"</p>
+                                            <div class="review-author">
+                                                <span class="review-name">allejazkhan</span>
+                                                <span class="review-platform">Pakistan · Fiverr</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"It was a huge pleasure working with this seller. I am so happy with the result of my website, everything looks great and he was able to follow all my requirements. I always get a response within 6 minutes. This is the best experience I've ever had."</p>
+                                            <div class="review-author">
+                                                <span class="review-name">njinjaji</span>
+                                                <span class="review-platform">Fiverr</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"He is very easy to communicate with, really dedicated, and knows what he's doing. It was a pleasure to get his help on such short notice. Really satisfied with his work."</p>
+                                            <div class="review-author">
+                                                <span class="review-name">lucianghionok</span>
+                                                <span class="review-platform">Fiverr</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"Very great work with him! Really good communication and fulfilled nearly all wishes perfectly. Will buy again if I need another website."</p>
+                                            <div class="review-author">
+                                                <span class="review-name">thoiliboi</span>
+                                                <span class="review-platform">Fiverr</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"I strongly recommend the seller! Went above and beyond to satisfy the needs of the project. Thank you!"</p>
+                                            <div class="review-author">
+                                                <span class="review-name">devantanji</span>
+                                                <span class="review-platform">Fiverr</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"I would recommend nahidhtamim to everyone, the service is great and you get what you ask for. Great experience overall!"</p>
+                                            <div class="review-author">
+                                                <span class="review-name">martinducamba</span>
+                                                <span class="review-platform">Netherlands · Fiverr</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"Tamim is a true professional and exceedingly consistent in his results as an extraordinary programmer. His expertise and his ability to take my feedback and make the product exactly what I envisioned is remarkable."</p>
+                                            <div class="review-author">
+                                                <span class="review-name">authenticationplatform</span>
+                                                <span class="review-platform">Fiverr</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"We have worked with websites for 20 years and so impressed with this gentleman's dedication and a willingness to go above and beyond. We highly recommend this gent and his leadership."</p>
+                                            <div class="review-author">
+                                                <span class="review-name">hon13ety</span>
+                                                <span class="review-platform">UK · Fiverr</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"Very helpful and will definitely look for you to do business again."</p>
+                                            <div class="review-author">
+                                                <span class="review-name">jordanking1291</span>
+                                                <span class="review-platform">UK · Fiverr</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"He was very nice and was easy to work with, nice communication!"</p>
+                                            <div class="review-author">
+                                                <span class="review-name">scriffyyy</span>
+                                                <span class="review-platform">Fiverr</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"Amazing piece of work by Tamim. Top 5 experience. He's VERY responsive, VERY accommodating, and delivers the gig loaded with high quality."</p>
+                                            <div class="review-author">
+                                                <span class="review-name">salim025</span>
+                                                <span class="review-platform">Fiverr</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-card">
+                                            <div class="review-stars">★★★★★</div>
+                                            <p class="review-text">"Tamim is a skilled and service-oriented programmer. I'm very pleased with the results."</p>
+                                            <div class="review-author">
+                                                <span class="review-name">andreastoflner</span>
+                                                <span class="review-platform">Fiverr</span>
                                             </div>
                                         </div>
                                     </div>
@@ -234,7 +341,7 @@
                             <h3 class="gradient">
                                 Resume
                             </h3>
-                            <hr>
+    
                             <div class="col-md-12">
                                 <ul class="timeline">
                                     <li>
@@ -290,7 +397,7 @@
                                 </ul>
                             </div>
                             <h3 class="gradient">Other Experience</h3>
-                            <hr>
+    
                             <div class="numbered-list">
                                 <div class="numbered-card">
                                     <div class="numbered-header">
@@ -337,7 +444,7 @@
                             </div>
 
                             <h3 class="gradient cert-heading">Training &amp; Certification</h3>
-                            <hr>
+    
                             <div class="numbered-list">
                                 <div class="numbered-card">
                                     <div class="numbered-header">
@@ -382,7 +489,7 @@
                         <h3 class="gradient">
                             Skills
                         </h3>
-                        <hr>
+
                         <div class="skill-tags-section">
                             <div class="skill-tag-group">
                                 <span class="skill-tag-label">Programming Languages</span>
@@ -430,7 +537,7 @@
                         <h3 class="gradient">
                             Portfolio
                         </h3>
-                        <hr>
+
                         <ul class="pf-filters">
                             <li class="active" data-bs-filter="*">All</li>
                             <li data-bs-filter=".ecommerce">E-commerce</li>
@@ -440,7 +547,7 @@
 
                         <div class="projects pf-grid">
                             <div class="item ecommerce">
-                                <div class="pf-card">
+                                <div class="pf-card" data-pf-title="NHT Brandshop" data-pf-cat="E-commerce" data-pf-desc="A full-featured e-commerce platform built with Laravel, MySQL, and JavaScript. Includes product management, shopping cart, payment gateway integration, and admin dashboard." data-pf-tags="Laravel,MySQL,JS" data-pf-img="images/portfolio/brandshop-gig.jpg" data-pf-link="">
                                     <div class="pf-img-wrap">
                                         <img src="images/portfolio/brandshop-gig.jpg" alt="NHT Brandshop" class="pf-img">
                                         <div class="pf-overlay">
@@ -460,7 +567,7 @@
                             </div>
 
                             <div class="item ecommerce">
-                                <div class="pf-card">
+                                <div class="pf-card" data-pf-title="Shilpabangla" data-pf-cat="E-commerce" data-pf-desc="E-commerce platform for a Bangladeshi handicraft brand. Features product catalog, order management, responsive design, and custom CMS for content updates." data-pf-tags="Laravel,MySQL,CSS" data-pf-img="images/portfolio/shilpabangla-gig.jpg" data-pf-link="">
                                     <div class="pf-img-wrap">
                                         <img src="images/portfolio/shilpabangla-gig.jpg" alt="Shilpabangla" class="pf-img">
                                         <div class="pf-overlay">
@@ -480,7 +587,7 @@
                             </div>
 
                             <div class="item business">
-                                <div class="pf-card">
+                                <div class="pf-card" data-pf-title="Eduzenship" data-pf-cat="Business" data-pf-desc="Professional website for a student consultancy firm. Built with Laravel featuring service listings, inquiry forms, blog system, and SEO-optimized pages." data-pf-tags="Laravel,MySQL,JS" data-pf-img="images/portfolio/Ivypro.jpg" data-pf-link="https://eduzenship.com/">
                                     <div class="pf-img-wrap">
                                         <img src="images/portfolio/Ivypro.jpg" alt="Eduzenship" class="pf-img">
                                         <div class="pf-overlay">
@@ -500,7 +607,7 @@
                             </div>
 
                             <div class="item business">
-                                <div class="pf-card">
+                                <div class="pf-card" data-pf-title="SET" data-pf-cat="Business" data-pf-desc="Premium laundry service website with online booking, service pricing, pickup scheduling, and customer dashboard. Clean UI with responsive design." data-pf-tags="Laravel,PHP,CSS" data-pf-img="images/portfolio/set-gig.jpg" data-pf-link="http://fiverr.eduzenship.com/">
                                     <div class="pf-img-wrap">
                                         <img src="images/portfolio/set-gig.jpg" alt="SET" class="pf-img">
                                         <div class="pf-overlay">
@@ -520,7 +627,7 @@
                             </div>
 
                             <div class="item business">
-                                <div class="pf-card">
+                                <div class="pf-card" data-pf-title="Alt Florida" data-pf-cat="Business" data-pf-desc="Rent-a-car business website featuring vehicle catalog, online reservation system, pricing calculator, and admin panel for fleet management." data-pf-tags="Laravel,MySQL,JS" data-pf-img="images/portfolio/main_affordable-gig.jpg" data-pf-link="">
                                     <div class="pf-img-wrap">
                                         <img src="images/portfolio/main_affordable-gig.jpg" alt="Alt Florida" class="pf-img">
                                         <div class="pf-overlay">
@@ -540,7 +647,7 @@
                             </div>
 
                             <div class="item others">
-                                <div class="pf-card">
+                                <div class="pf-card" data-pf-title="TAD" data-pf-cat="Others" data-pf-desc="Client-Coach exam portal with role-based access, exam creation, real-time scoring, progress tracking, and dashboard analytics for coaches and students." data-pf-tags="Laravel,PHP,MySQL" data-pf-img="images/portfolio/tad.jpg" data-pf-link="http://freelancing.eduzenship.com/">
                                     <div class="pf-img-wrap">
                                         <img src="images/portfolio/tad.jpg" alt="TAD" class="pf-img">
                                         <div class="pf-overlay">
@@ -563,7 +670,7 @@
                     </div>
                     <div id="Section5" class="educationDiv" style="display:none;">
                         <h3 class="gradient">Education</h3>
-                        <hr>
+
 
                         <div class="edu-cards">
                             <div class="edu-card">
@@ -614,7 +721,7 @@
 
                     <div id="Section4" class="contactDiv" style="display:none;">
                         <h3 class="gradient">Contact</h3>
-                        <hr>
+
                         <p class="contact-intro">Feel free to reach out for collaborations, remote opportunities, or projects.</p>
 
                         <div class="contact-grid">
@@ -689,10 +796,17 @@
                             </button>
                         </form>
                     </div>
+                    <div class="book-page-num"><span id="page-num">2</span></div>
                 </div>
 
                 <!--==============================
-                    Details Section Ends
+                    Details Section Ends (Right Page)
+                !=================================-->
+
+                </div><!-- .book -->
+
+                <!--==============================
+                    Book Layout Ends
                 !=================================-->
 
             </div>
@@ -710,6 +824,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- Project Details Modal -->
+    <div class="pf-modal-overlay" id="pf-modal">
+        <div class="pf-modal">
+            <button class="pf-modal-close" id="pf-modal-close"><i class="bi bi-x-lg"></i></button>
+            <div class="pf-modal-img-wrap">
+                <img src="" alt="" class="pf-modal-img" id="pf-modal-img">
+                <span class="pf-modal-cat" id="pf-modal-cat"></span>
+            </div>
+            <div class="pf-modal-body">
+                <h3 class="pf-modal-title" id="pf-modal-title"></h3>
+                <p class="pf-modal-desc" id="pf-modal-desc"></p>
+                <div class="pf-modal-tags" id="pf-modal-tags"></div>
+                <div class="pf-modal-actions" id="pf-modal-actions"></div>
+            </div>
+        </div>
+    </div>
 
     <!--==============================
     Scripts
